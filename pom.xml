@@ -1,0 +1,106 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+   <!-- Parent POM -->
+   <parent>
+      <groupId>org.datatables4j</groupId>
+      <artifactId>datatables4j-parent</artifactId>
+      <version>0.0.0-SNAPSHOT</version>
+   </parent>
+
+   <!-- Main configuration -->
+   <artifactId>datatables4j-examples</artifactId>
+   <version>0.0.0-SNAPSHOT</version>
+   <packaging>war</packaging>
+   <name>Use example for DataTables4j</name>
+   <url>http://tduchateau.github.com/DataTables4j</url>
+
+   <dependencies>
+      <!-- Internal dependencies -->
+      <dependency>
+         <groupId>org.datatables4j</groupId>
+         <artifactId>datatables4j-core-impl</artifactId>
+      </dependency>
+
+      <!-- DataTables-taglib (old version to test retro-compatibility) -->
+      <dependency>
+         <groupId>fr.tduchateau</groupId>
+         <artifactId>datatables-taglib</artifactId>
+         <version>1.0.3</version>
+      </dependency>
+
+      <!-- JSTL -->
+      <dependency>
+         <groupId>jstl</groupId>
+         <artifactId>jstl</artifactId>
+         <version>1.2</version>
+      </dependency>
+
+      <!-- Spring -->
+      <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-web</artifactId>
+         <version>3.1.1.RELEASE</version>
+      </dependency>
+      <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-webmvc</artifactId>
+         <version>3.1.1.RELEASE</version>
+      </dependency>
+
+      <!-- Tiles -->
+      <dependency>
+         <groupId>org.apache.tiles</groupId>
+         <artifactId>tiles-core</artifactId>
+         <version>2.2.2</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.tiles</groupId>
+         <artifactId>tiles-jsp</artifactId>
+         <version>2.2.2</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.tiles</groupId>
+         <artifactId>tiles-servlet</artifactId>
+         <version>2.2.2</version>
+      </dependency>
+
+      <!-- Logging -->
+      <dependency>
+         <groupId>org.slf4j</groupId>
+         <artifactId>jcl-over-slf4j</artifactId>
+         <version>1.6.4</version>
+      </dependency>
+      <dependency>
+         <groupId>ch.qos.logback</groupId>
+         <artifactId>logback-classic</artifactId>
+         <version>1.0.7</version>
+      </dependency>
+      <dependency>
+         <groupId>ch.qos.logback</groupId>
+         <artifactId>logback-access</artifactId>
+         <version>1.0.7</version>
+      </dependency>
+   </dependencies>
+
+   <repositories>
+      <repository>
+         <id>tduchateau-maven-repo</id>
+         <url>https://raw.github.com/tduchateau/tduchateau-maven-repo/master/releases</url>
+      </repository>
+   </repositories>
+
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>maven-jetty-plugin</artifactId>
+            <version>6.1.26</version>
+            <configuration>
+               <scanIntervalSeconds>0</scanIntervalSeconds>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
+</project>

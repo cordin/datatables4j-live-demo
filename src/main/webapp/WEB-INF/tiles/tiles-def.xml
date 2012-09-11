@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+   <!-- Main layout -->
+   <definition name="mainLayout" template="/WEB-INF/jsp/common/mainLayout.jsp">
+      <put-attribute name="tabHome" value="" />
+      <put-attribute name="tabBasic" value="" />
+      <put-attribute name="tabAdvanced" value="" />
+      <put-attribute name="tabDatasource" value="" />
+      <put-attribute name="title" value="" />
+      <put-attribute name="content" value="" />
+   </definition>
+
+   <!-- Basic examples -->
+   <definition name="basic.default" extends="mainLayout">
+      <put-attribute name="tabBasic" value="active" />
+      <put-attribute name="title" value="Default configuration" />
+      <put-attribute name="content" value="/WEB-INF/jsp/basic/default.jsp" />
+   </definition>
+   
+   <definition name="basic.sorting" extends="mainLayout">
+      <put-attribute name="tabBasic" value="active" />
+      <put-attribute name="title" value="Table sorting" />
+      <put-attribute name="content" value="/WEB-INF/jsp/basic/sorting.jsp" />
+   </definition>
+   
+   <definition name="basic.sorting" extends="mainLayout">
+      <put-attribute name="tabBasic" value="active" />
+      <put-attribute name="title" value="Table sorting" />
+      <put-attribute name="content" value="/WEB-INF/jsp/basic/sorting.jsp" />
+   </definition>
+   
+   <definition name="basic.multiple" extends="mainLayout">
+      <put-attribute name="tabBasic" value="active" />
+      <put-attribute name="title" value="Multiple tables" />
+      <put-attribute name="content" value="/WEB-INF/jsp/basic/multiple.jsp" />
+   </definition>
+   
+   <definition name="basic.pagination" extends="mainLayout">
+      <put-attribute name="tabBasic" value="active" />
+      <put-attribute name="title" value="Pagination" />
+      <put-attribute name="content" value="/WEB-INF/jsp/basic/pagination.jsp" />
+   </definition>
+   
+   <!-- Datasource examples -->
+   <definition name="ds.dom" extends="mainLayout">
+      <put-attribute name="tabDataSource" value="active" />
+      <put-attribute name="title" value="DOM datasource" />
+      <put-attribute name="content" value="/WEB-INF/jsp/datasource/domds.jsp" />
+   </definition>
+   
+   <definition name="ds.arrayofarrays" extends="mainLayout">
+      <put-attribute name="tabDataSource" value="active" />
+      <put-attribute name="title" value="Javascrip Array datasource" />
+      <put-attribute name="content" value="/WEB-INF/jsp/datasource/jsarrayds.jsp" />
+   </definition>
+   
+   <definition name="ds.arrayofobjects" extends="mainLayout">
+      <put-attribute name="tabDataSource" value="active" />
+      <put-attribute name="title" value="AJAX datasource" />
+      <put-attribute name="content" value="/WEB-INF/jsp/datasource/jsobjectds.jsp" />
+   </definition>
+   
+   <definition name="tiles.test1" extends="mainLayout">
+      <put-attribute name="tabDataSource" value="active" />
+      <put-attribute name="title" value="AJAX datasource" />
+      <put-attribute name="content" value="/WEB-INF/jsp/test/test1.jsp" />
+   </definition>
+   
+   <definition name="tiles.test2" extends="mainLayout">
+      <put-attribute name="tabDataSource" value="active" />
+      <put-attribute name="title" value="AJAX datasource" />
+      <put-attribute name="content" value="/WEB-INF/jsp/test/test2.jsp" />
+   </definition>
+</tiles-definitions>
