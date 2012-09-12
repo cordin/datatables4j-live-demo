@@ -30,6 +30,6 @@ public class BaseController {
 	
 	@RequestMapping(value="personsWs", method = RequestMethod.GET)
 	public @ResponseBody List<Person> getPersons(){
-		return personCoordinator.get100();
+		return personCoordinator.get1000();
 	}
 }
