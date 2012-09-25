@@ -23,7 +23,7 @@ public class BaseController {
 	@Autowired
 	private PersonService personCoordinator;
 	
-	@ModelAttribute("personsList")
+	@ModelAttribute("persons")
 	public List<Person> populateTable(){
 		return personCoordinator.get100();
 	}

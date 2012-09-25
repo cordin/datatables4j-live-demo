@@ -5,10 +5,12 @@
 
 <div class="row">
    <div class="span12">
-      <h3>Default configuration</h3>
+      <h3>Change length</h3>
       <p>
-         The example below shows what happens with the minimal configuration. You just need to have a Java Collection in the <strong>request</strong>
-         scope.
+         By default, pagination is enabled but you can disable it using the <tt>paginate</tt> table attribute.
+      </p>
+      <p>
+         You can also change the default pagination type ("two_buttons") by setting the <tt>paginationType</tt> table attribute to "full_numbers".     
       </p>
       <hr />
    </div>
@@ -17,7 +19,7 @@
 <div class="row">
    <div class="span12">
 
-      <datatables:table id="myTableId" data="${persons}">
+      <datatables:table id="myTableId" data="${persons}" paginationType="full_numbers">
          <datatables:column title="Id" property="id" />
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />
@@ -29,22 +31,22 @@
 </div>
 
 <br />
-<a href="<c:url value="/datatablesFile/modules/fixedheader/js/datatables.fixedheader.min.js"/>">Test</a>
+
 <div class="row">
    <div class="span12 bs-docs-example">
       <p>
-         Take a look at the JSP : <tt>WEB-INF/jsp/basic/default.jsp</tt>
+         Take a look at the JSP : <tt>WEB-INF/jsp/basic/pagination.jsp</tt>
       </p>
       <p>
 <pre class="prettyprint">
-&lt;datatables:table id="myTableId" data="&#36;&#123;persons&#125;"&gt;
+&lt;datatables:table id="toto" data="&#36;&#123;persons&#125;" paginationType="full_numbers"&gt;
    &lt;datatables:column title="Id" property="id" /&gt;
    &lt;datatables:column title="FirstName" property="firstName" /&gt;
    &lt;datatables:column title="LastName" property="lastName" /&gt;
    &lt;datatables:column title="Street" property="address.street1" /&gt;
    &lt;datatables:column title="Mail" property="mail" /&gt;
 &lt;/datatables:table&gt;
-</pre>
+</pre>      
       </p>
    </div>
 </div>

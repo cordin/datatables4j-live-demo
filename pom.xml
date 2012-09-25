@@ -6,12 +6,11 @@
    <parent>
       <groupId>org.datatables4j</groupId>
       <artifactId>datatables4j-parent</artifactId>
-      <version>0.0.0-SNAPSHOT</version>
+      <version>0.1.0-SNAPSHOT</version>
    </parent>
 
    <!-- Main configuration -->
    <artifactId>datatables4j-examples</artifactId>
-   <version>0.0.0-SNAPSHOT</version>
    <packaging>war</packaging>
    <name>Use example for DataTables4j</name>
    <url>http://tduchateau.github.com/DataTables4j</url>

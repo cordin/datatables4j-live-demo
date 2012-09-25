@@ -6,7 +6,9 @@
    <tiles:putAttribute name="tabHome" value="active" />
    <tiles:putAttribute name="tabBasic" value="" />
    <tiles:putAttribute name="tabAdvanced" value="" />
-   <tiles:putAttribute name="tabDatasource" value="" />
+   <tiles:putAttribute name="tabDatasources" value="" />
+   <tiles:putAttribute name="tabPlugins" value="" />
+   <tiles:putAttribute name="tabFeatures" value="" />
    <tiles:putAttribute name="title" value="POC DataTables-taglib" />
    <tiles:putAttribute name="content" value="/WEB-INF/jsp/overview.jsp" />
 </tiles:insertTemplate>

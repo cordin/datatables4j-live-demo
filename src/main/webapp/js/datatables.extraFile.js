@@ -1,1 +1,5 @@
-// Ceci est un test réussi !
+// Ceci est un test !
+var uneVariable = function(){
+	// Ceci est un commentaire
+	alert("toto");
+};

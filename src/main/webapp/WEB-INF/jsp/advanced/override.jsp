@@ -5,10 +5,19 @@
 
 <div class="row">
    <div class="span12">
-      <h3>Default configuration</h3>
+      <h3>Override defaults configuration</h3>
       <p>
-         The example below shows what happens with the minimal configuration. You just need to have a Java Collection in the <strong>request</strong>
-         scope.
+         By default, DataTables4j internally uses a properties file containing all needed configuration. But there are two ways to override it.
+      </p>
+      <p>
+         First, you can add a file called <strong>datatables4j.properties</strong> in your classpath, allowing you to redefine every property you
+         need. Your custom global configuration will then be merged with the default one. 
+      </p>
+      <p>
+         Other way, you can locally override properties using the <tt>prop</tt> tag. Just define the property's name and value.
+      </p>
+      <p>
+         For instance, compression is by default disabled. Thanks to the <tt>prop</tt> tag, you can enable it locally, just for a given JSP.
       </p>
       <hr />
    </div>
@@ -23,13 +32,14 @@
          <datatables:column title="LastName" property="lastName" />
          <datatables:column title="Street" property="address.street1" />
          <datatables:column title="Mail" property="mail" />
+         <datatables:prop name="datatables4j.compressor.enable" value="true"/>
       </datatables:table>
       
    </div>
 </div>
 
 <br />
-<a href="<c:url value="/datatablesFile/modules/fixedheader/js/datatables.fixedheader.min.js"/>">Test</a>
+
 <div class="row">
    <div class="span12 bs-docs-example">
       <p>
@@ -43,6 +53,7 @@
    &lt;datatables:column title="LastName" property="lastName" /&gt;
    &lt;datatables:column title="Street" property="address.street1" /&gt;
    &lt;datatables:column title="Mail" property="mail" /&gt;
+   &lt;datatables:prop name="datatables4j.compressor.enable" value="false"/&gt;
 &lt;/datatables:table&gt;
 </pre>
       </p>
