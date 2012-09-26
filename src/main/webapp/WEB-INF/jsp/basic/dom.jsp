@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="datatables" uri="http://github.com/tduchateau/DataTables4j"%>
+<%@ taglib prefix="datatables" uri="http://github.com/datatables4j"%>
 
 <datatables:table id="myTableId" data="${persons}" row="person" rowIdBase="id" rowIdPrefix="toto_" colReorder="true" cdn="true">
    <datatables:column title="Id" property="id" />

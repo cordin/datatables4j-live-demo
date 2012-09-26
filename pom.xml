@@ -2,15 +2,10 @@
    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
    <modelVersion>4.0.0</modelVersion>
 
-   <!-- Parent POM -->
-   <parent>
-      <groupId>org.datatables4j</groupId>
-      <artifactId>datatables4j-parent</artifactId>
-      <version>0.1.0-SNAPSHOT</version>
-   </parent>
-
    <!-- Main configuration -->
+   <groupId>org.datatables4j</groupId>
    <artifactId>datatables4j-examples</artifactId>
+   <version>0.2.0-SNAPSHOT</version>
    <packaging>war</packaging>
    <name>Use example for DataTables4j</name>
    <url>http://tduchateau.github.com/DataTables4j</url>
@@ -20,6 +15,7 @@
       <dependency>
          <groupId>org.datatables4j</groupId>
          <artifactId>datatables4j-core-impl</artifactId>
+         <version>0.2.0-SNAPSHOT</version>
       </dependency>
 
       <!-- DataTables-taglib (old version to test retro-compatibility) -->
@@ -87,6 +83,16 @@
       <repository>
          <id>tduchateau-maven-repo</id>
          <url>https://raw.github.com/tduchateau/tduchateau-maven-repo/master/releases</url>
+      </repository>
+      <repository>
+         <id>datatables4j-snapshot-repo</id>
+         <name>DataTables4j Snapshot Repository</name>
+         <url>http://repository-datatables4j.forge.cloudbees.com/snapshot/</url>
+      </repository>
+      <repository>
+         <id>datatables4j-release-repo</id>
+         <name>DataTables4j Release Repository</name>
+         <url>http://repository-datatables4j.forge.cloudbees.com/release/</url>
       </repository>
    </repositories>
 

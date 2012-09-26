@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="datatables" uri="http://github.com/tduchateau/DataTables4j"%>
+<%@ taglib prefix="datatables" uri="http://github.com/datatables4j"%>
 
 <c:url value="/plugins" var="plugins" />
 
@@ -45,6 +45,7 @@
                   <datatables:column title="LastName" property="lastName" />
                   <datatables:column title="Street" property="address.street1" />
                   <datatables:column title="Mail" property="mail" />
+                  <datatables:prop name="datatables4j.compressor.enable" value="true"/>
                </datatables:table>
             </p>
          </div>

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="datatables" uri="http://github.com/tduchateau/DataTables4j"%>
+<%@ taglib prefix="datatables" uri="http://github.com/datatables4j"%>
 
 <c:url value="/plugins" var="plugins" />
 

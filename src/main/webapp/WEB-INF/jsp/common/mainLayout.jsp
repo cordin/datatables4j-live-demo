@@ -95,7 +95,7 @@ body {
                   </li>
                </ul>
                <ul class="nav pull-right">
-                  <li><a href="http://localhost:9000"><i class="icon-globe"></i> Reference</a></li>
+                  <li><a href="http://datatables4j.github.com/datatables4j/"><i class="icon-globe"></i> Reference</a></li>
                   <li class="dropdown">
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search"></i> Help <b class="caret"></b></a>
                      <ul class="dropdown-menu">
