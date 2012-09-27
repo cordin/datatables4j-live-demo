@@ -38,9 +38,9 @@ public class BasicController extends BaseController {
 		return "basic.filtering";
 	}
 	
-	@RequestMapping(value="/pagination")
+	@RequestMapping(value="/paging")
 	public String goPagination() {
-		return "basic.pagination";
+		return "basic.paging";
 	}
 	
 	@RequestMapping(value="/lengthchange")

@@ -1,11 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../common/taglib.jsp" %>
 
+<%@ taglib prefix="datatables" uri="http://github.com/datatables4j" %>
+
 <div class="row">
    <div class="span12">
-      <h3>Table informations</h3>
+      <h3>DOM data source</h3>
       <p>
-         You can display (or hide) the table informations using the <code>info</code> table attribute.
+         TODO
       </p>
       <hr />
    </div>
@@ -14,8 +16,8 @@
 <div class="row">
    <div class="span12">
 
-      <datatables:table id="myTableId" data="${persons}" info="false">
-         <datatables:column title="Id" property="id" />
+      <datatables:table id="myTableId" data="${persons}">
+         <datatables:column title="Id" property="id"/>
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />
          <datatables:column title="Street" property="address.street1" />
@@ -26,4 +28,4 @@
 </div>
 
 <%-- Documentation --%>
-<doc:doc source="basic/info.jsp" doc="basic.info.html" />
+<doc:doc source="datasource/sorting.jsp" doc="datasource.dom.html" />

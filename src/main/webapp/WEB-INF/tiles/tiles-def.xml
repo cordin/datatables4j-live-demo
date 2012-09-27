@@ -1,21 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE tiles-definitions PUBLIC
-       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
-       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
 
    <!-- Main layout -->
    <definition name="mainLayout" template="/WEB-INF/jsp/common/mainLayout.jsp">
-      <put-attribute name="tabHome" value="" />
-      <put-attribute name="tabBasic" value="" />
-      <put-attribute name="tabAdvanced" value="" />
-      <put-attribute name="tabDatasources" value="" />
-      <put-attribute name="tabPlugins" value="" />
-      <put-attribute name="tabFeatures" value="" />
-      <put-attribute name="title" value="" />
-      <put-attribute name="content" value="" />
+      <put-attribute name="tabHome" value="" cascade="true" />
+      <put-attribute name="tabBasic" value="" cascade="true" />
+      <put-attribute name="tabAdvanced" value="" cascade="true" />
+      <put-attribute name="tabDatasource" value="" cascade="true" />
+      <put-attribute name="tabPlugins" value="" cascade="true" />
+      <put-attribute name="tabFeatures" value="" cascade="true" />
+      <put-attribute name="title" value="" cascade="true" />
+      <put-attribute name="content" value="" cascade="true" />
    </definition>
 
+   <!-- Plugin layout -->
+   <definition name="pluginLayout" extends="mainLayout">
+      <put-attribute name="tabPlugins" value="active" />
+      <put-attribute name="navHome" value="" cascade="true" />
+      <put-attribute name="navFixedHeader" value="" cascade="true" />
+      <put-attribute name="navScroller" value="" cascade="true" />
+      <put-attribute name="navColReorder" value="" cascade="true" />
+      <put-attribute name="navTableTools" value="" cascade="true" />
+      <put-attribute name="navCombo" value="" cascade="true" />
+      <put-attribute name="content" value="/WEB-INF/jsp/common/pluginLayout.jsp" cascade="true" />
+      <put-attribute name="pluginContent" value="" cascade="true" />
+   </definition>
+
+   <!-- Feature layout -->
+   <definition name="featureLayout" extends="mainLayout">
+      <put-attribute name="tabFeatures" value="active" />
+      <put-attribute name="navHome" value="" cascade="true" />
+      <put-attribute name="navCompressor" value="" cascade="true" />
+      <put-attribute name="navAggregator" value="" cascade="true" />
+      <put-attribute name="navExport" value="" cascade="true" />      
+      <put-attribute name="content" value="/WEB-INF/jsp/common/featureLayout.jsp" cascade="true" />
+      <put-attribute name="featureContent" value="" cascade="true" />
+   </definition>
+   
    <!-- Basic examples -->
    <definition name="basic.default" extends="mainLayout">
       <put-attribute name="tabBasic" value="active" />
@@ -42,11 +64,10 @@
          value="/WEB-INF/jsp/basic/filtering.jsp" />
    </definition>
 
-   <definition name="basic.pagination" extends="mainLayout">
+   <definition name="basic.paging" extends="mainLayout">
       <put-attribute name="tabBasic" value="active" />
-      <put-attribute name="title" value="Pagination" />
-      <put-attribute name="content"
-         value="/WEB-INF/jsp/basic/pagination.jsp" />
+      <put-attribute name="title" value="Table paging" />
+      <put-attribute name="content" value="/WEB-INF/jsp/basic/paging.jsp" />
    </definition>
 
    <definition name="basic.lengthchange" extends="mainLayout">
@@ -55,33 +76,46 @@
       <put-attribute name="content"
          value="/WEB-INF/jsp/basic/lengthchange.jsp" />
    </definition>
-   
+
    <definition name="basic.autowidth" extends="mainLayout">
       <put-attribute name="tabBasic" value="active" />
       <put-attribute name="title" value="Pagination" />
       <put-attribute name="content"
          value="/WEB-INF/jsp/basic/autowidth.jsp" />
    </definition>
-   
+
    <definition name="basic.dom" extends="mainLayout">
       <put-attribute name="tabBasic" value="active" />
       <put-attribute name="title" value="Pagination" />
-      <put-attribute name="content"
-         value="/WEB-INF/jsp/basic/dom.jsp" />
+      <put-attribute name="content" value="/WEB-INF/jsp/basic/dom.jsp" />
    </definition>
-   
+
    <definition name="basic.ajax" extends="mainLayout">
       <put-attribute name="tabBasic" value="active" />
       <put-attribute name="title" value="Pagination" />
-      <put-attribute name="content"
-         value="/WEB-INF/jsp/basic/ajax.jsp" />
+      <put-attribute name="content" value="/WEB-INF/jsp/basic/ajax.jsp" />
    </definition>
-   
+
    <definition name="basic.implicitObject" extends="mainLayout">
       <put-attribute name="tabBasic" value="active" />
       <put-attribute name="title" value="Pagination" />
       <put-attribute name="content"
          value="/WEB-INF/jsp/basic/implicitObject.jsp" />
+   </definition>
+
+   <!-- Datasources examples -->
+   <definition name="datasource.dom" extends="mainLayout">
+      <put-attribute name="tabDatasource" value="active" />
+      <put-attribute name="title" value="DOM datasource" />
+      <put-attribute name="content"
+         value="/WEB-INF/jsp/datasource/dom.jsp" />
+   </definition>
+
+   <definition name="datasource.ajax" extends="mainLayout">
+      <put-attribute name="tabDatasource" value="active" />
+      <put-attribute name="title" value="AJAX datasource" />
+      <put-attribute name="content"
+         value="/WEB-INF/jsp/datasource/ajax.jsp" />
    </definition>
 
    <!-- Advanced examples -->
@@ -91,28 +125,28 @@
       <put-attribute name="content"
          value="/WEB-INF/jsp/advanced/rowid.jsp" />
    </definition>
-   
+
    <definition name="advanced.extraconf" extends="mainLayout">
       <put-attribute name="tabAdvanced" value="active" />
       <put-attribute name="title" value="Default configuration" />
       <put-attribute name="content"
          value="/WEB-INF/jsp/advanced/extraconf.jsp" />
    </definition>
-   
+
    <definition name="advanced.extrafile" extends="mainLayout">
       <put-attribute name="tabAdvanced" value="active" />
       <put-attribute name="title" value="Default configuration" />
       <put-attribute name="content"
          value="/WEB-INF/jsp/advanced/extrafile.jsp" />
    </definition>
-   
+
    <definition name="advanced.override" extends="mainLayout">
       <put-attribute name="tabAdvanced" value="active" />
       <put-attribute name="title" value="Default configuration" />
       <put-attribute name="content"
          value="/WEB-INF/jsp/advanced/override.jsp" />
    </definition>
-   
+
    <definition name="advanced.multiple" extends="mainLayout">
       <put-attribute name="tabAdvanced" value="active" />
       <put-attribute name="title" value="Default configuration" />
@@ -126,93 +160,82 @@
       <put-attribute name="content"
          value="/WEB-INF/jsp/advanced/ninja.jsp" />
    </definition>
-  
+
    <!-- Plugins examples -->
-   <definition name="plugins.home" extends="mainLayout">
-      <put-attribute name="tabPlugins" value="active" />
+   <definition name="plugins.home" extends="pluginLayout">
       <put-attribute name="title" value="Plugins" />
-      <put-attribute name="content" value="/WEB-INF/jsp/plugins/home.jsp" />
+      <put-attribute name="navHome" value="active" cascade="true" />
+      <put-attribute name="pluginContent" value="/WEB-INF/jsp/plugins/home.jsp" cascade="true" />
    </definition>
 
-   <definition name="plugins.fixedheader" extends="mainLayout">
-      <put-attribute name="tabPlugins" value="active" />
+   <definition name="plugins.fixedheader" extends="pluginLayout">
       <put-attribute name="title" value="Plugins" />
-      <put-attribute name="content"
-         value="/WEB-INF/jsp/plugins/fixedheader.jsp" />
+      <put-attribute name="navFixedHeader" value="active" cascade="true" />
+      <put-attribute name="pluginContent" value="/WEB-INF/jsp/plugins/fixedheader.jsp" cascade="true" />
    </definition>
 
-   <definition name="plugins.scroller" extends="mainLayout">
-      <put-attribute name="tabPlugins" value="active" />
+   <definition name="plugins.scroller" extends="pluginLayout">
       <put-attribute name="title" value="Plugins" />
-      <put-attribute name="content"
-         value="/WEB-INF/jsp/plugins/scroller.jsp" />
+      <put-attribute name="navScroller" value="active" cascade="true" />
+      <put-attribute name="pluginContent"
+         value="/WEB-INF/jsp/plugins/scroller.jsp" cascade="true" />
    </definition>
 
-   <definition name="plugins.colreorder" extends="mainLayout">
-      <put-attribute name="tabPlugins" value="active" />
+   <definition name="plugins.colreorder" extends="pluginLayout">
       <put-attribute name="title" value="Plugins" />
-      <put-attribute name="content"
-         value="/WEB-INF/jsp/plugins/colreorder.jsp" />
+      <put-attribute name="navColReorder" value="active" cascade="true" />
+      <put-attribute name="pluginContent"
+         value="/WEB-INF/jsp/plugins/colreorder.jsp" cascade="true" />
    </definition>
 
-   <definition name="plugins.tabletools" extends="mainLayout">
-      <put-attribute name="tabPlugins" value="active" />
+   <definition name="plugins.tabletools" extends="pluginLayout">
       <put-attribute name="title" value="Plugins" />
-      <put-attribute name="content"
-         value="/WEB-INF/jsp/plugins/tabletools.jsp" />
+      <put-attribute name="navTableTools" value="active" cascade="true" />
+      <put-attribute name="pluginContent"
+         value="/WEB-INF/jsp/plugins/tabletools.jsp" cascade="true" />
    </definition>
 
-   <definition name="plugins.combo" extends="mainLayout">
-      <put-attribute name="tabPlugins" value="active" />
+   <definition name="plugins.combo" extends="pluginLayout">
       <put-attribute name="title" value="Plugins" />
-      <put-attribute name="content" value="/WEB-INF/jsp/plugins/combo.jsp" />
+      <put-attribute name="navCombo" value="active" cascade="true" />
+      <put-attribute name="pluginContent" value="/WEB-INF/jsp/plugins/combo.jsp" cascade="true" />
    </definition>
 
-   <definition name="plugins.addyourplugin" extends="mainLayout">
-      <put-attribute name="tabPlugins" value="active" />
+   <definition name="plugins.addyourplugin" extends="pluginLayout">
       <put-attribute name="title" value="Plugins" />
-      <put-attribute name="content"
-         value="/WEB-INF/jsp/plugins/addyourplugin.jsp" />
+      <put-attribute name="pluginContent"
+         value="/WEB-INF/jsp/plugins/addyourplugin.jsp" cascade="true" />
    </definition>
 
    <!-- Features examples -->
-   <definition name="features.home" extends="mainLayout">
+   <definition name="features.home" extends="featureLayout">
       <put-attribute name="tabFeatures" value="active" />
-      <put-attribute name="title" value="Plugins" />
-      <put-attribute name="content" value="/WEB-INF/jsp/features/home.jsp" />
+      <put-attribute name="title" value="Features" />
+      <put-attribute name="navHome" value="active" cascade="true" />
+      <put-attribute name="featureContent" value="/WEB-INF/jsp/features/home.jsp" />
    </definition>
 
-   <definition name="features.export" extends="mainLayout">
+   <definition name="features.export" extends="featureLayout">
       <put-attribute name="tabFeatures" value="active" />
-      <put-attribute name="title" value="Plugins" />
-      <put-attribute name="content"
+      <put-attribute name="title" value="Features" />
+      <put-attribute name="navExport" value="active" cascade="true" />
+      <put-attribute name="featureContent"
          value="/WEB-INF/jsp/features/export.jsp" />
    </definition>
 
-   <definition name="features.compressor" extends="mainLayout">
+   <definition name="features.compressor" extends="featureLayout">
       <put-attribute name="tabFeatures" value="active" />
-      <put-attribute name="title" value="Plugins" />
-      <put-attribute name="content"
+      <put-attribute name="title" value="Features" />
+      <put-attribute name="navCompressor" value="active" cascade="true" />
+      <put-attribute name="featureContent"
          value="/WEB-INF/jsp/features/compressor.jsp" />
    </definition>
 
-   <definition name="features.aggregator" extends="mainLayout">
+   <definition name="features.aggregator" extends="featureLayout">
       <put-attribute name="tabFeatures" value="active" />
-      <put-attribute name="title" value="Plugins" />
-      <put-attribute name="content"
+      <put-attribute name="title" value="Features" />
+      <put-attribute name="navAggregator" value="active" cascade="true" />
+      <put-attribute name="featureContent"
          value="/WEB-INF/jsp/features/aggregator.jsp" />
-   </definition>
-
-   <!-- TESTS -->
-   <definition name="tiles.test1" extends="mainLayout">
-      <put-attribute name="tabDataSource" value="active" />
-      <put-attribute name="title" value="AJAX datasource" />
-      <put-attribute name="content" value="/WEB-INF/jsp/test/test1.jsp" />
-   </definition>
-
-   <definition name="tiles.test2" extends="mainLayout">
-      <put-attribute name="tabDataSource" value="active" />
-      <put-attribute name="title" value="AJAX datasource" />
-      <put-attribute name="content" value="/WEB-INF/jsp/test/test2.jsp" />
    </definition>
 </tiles-definitions>

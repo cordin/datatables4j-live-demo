@@ -6,7 +6,7 @@
 <c:url value="/" var="home" />
 <c:url value="/basic" var="basic" />
 <c:url value="/advanced" var="advanced" />
-<c:url value="/datasources" var="datasources" />
+<c:url value="/datasource" var="datasource" />
 <c:url value="/plugins" var="plugins" />
 <c:url value="/features" var="features" />
 
@@ -33,6 +33,19 @@ body {
 }
 </style>
 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33818546-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 <body>
 
@@ -41,7 +54,7 @@ body {
          <div class="container">
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span>
                <span class="icon-bar"></span>
-            </a> <a class="brand" href="#">DataTables4j</a>
+            </a> <a class="brand" href="${home}">DataTables4j</a>
             <div class="nav-collapse collapse">
                <ul class="nav">
                   <li class="<tiles:getAsString name="tabHome" />"><a href="${home}"><i class="icon-home"></i> Home</a></li>
@@ -50,15 +63,20 @@ body {
                      <ul class="dropdown-menu">
                         <li><a href="${basic}/default">Default configuration</a></li>
                         <li><a href="${basic}/info">Display table informations</a></li>
-                        <li><a href="${basic}/sorting">Table sorting (TODO)</a></li>
+                        <li><a href="${basic}/sorting">Table sorting</a></li>
                         <li><a href="${basic}/filtering">Table filtering</a></li>
-                        <li><a href="${basic}/pagination">Table paginating</a></li>
+                        <li><a href="${basic}/paging">Table paging</a></li>
                         <li><a href="${basic}/lengthchange">Change length (TODO)</a></li>
                         <li><a href="${basic}/autowidth">Auto width (TODO)</a></li>
-                        <li><a href="${basic}/dom">DOM data source</a></li>
-                        <li><a href="${basic}/ajax">AJAX data source</a></li>
                         <li><a href="${basic}/implicitObject">Using implicit object (TODO)</a></li>
                         <li><a href="${basic}/cdn">Using CDN (TODO)</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown <tiles:getAsString name="tabDatasource" />">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-hdd"></i> Datasource<b class="caret"></b></a>
+                     <ul class="dropdown-menu">
+                        <li><a href="${datasource}/dom">DOM</a></li>
+                        <li><a href="${datasource}/ajax">AJAX</a></li>
                      </ul>
                   </li>
                   <li class="dropdown <tiles:getAsString name="tabAdvanced" />">
@@ -79,18 +97,17 @@ body {
                         <li><a href="${plugins}/fixedheader">FixedHeader</a></li>
                         <li><a href="${plugins}/scroller">Scroller</a></li>
                         <li><a href="${plugins}/colreorder">ColReorder</a></li>
-                        <li><a href="${plugins}/tabletools">TableTools (TODO)</a></li>
-                        <li><a href="${plugins}/combo">Plugins combo (TODO)</a></li>
-                        <li><a href="${plugins}/addyourplugin">Add your plugin (TODO)</a></li>
+                        <%--<li><a href="${plugins}/tabletools">TableTools</a></li> --%>
+                        <li><a href="${plugins}/combo">Plugins combo </a></li>
                      </ul>
                   </li>
                   <li class="dropdown <tiles:getAsString name="tabFeatures" />">
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-list"></i> Features<b class="caret"></b></a>
                      <ul class="dropdown-menu">
                         <li><a href="${features}/home">Home (TODO)</a></li>
-                        <li><a href="${features}/export">Export (TODO)</a></li>
                         <li><a href="${features}/compressor">Compressor (TODO)</a></li>
                         <li><a href="${features}/aggregator">Aggregator (TODO)</a></li>
+                        <%--<li><a href="${features}/export">Export (TODO)</a></li> --%>
                      </ul>
                   </li>
                </ul>
@@ -113,10 +130,9 @@ body {
    <div class="container">
 
       <tiles:insertAttribute name="content" />
-
       <hr />
       <footer>
-         <p>DataTables4j - v0.0.0-SNAPSHOT</p>
+         <p>DataTables4j - v0.3.0-SNAPSHOT</p>
       </footer>
 
    </div>

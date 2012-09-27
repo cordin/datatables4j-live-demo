@@ -16,21 +16,21 @@ public class FeaturesController extends BaseController {
     
 	@RequestMapping(value="/home")
 	public String goHome(ModelMap model) {
-		return "plugins.home";
+		return "features.home";
 	}
 	
 	@RequestMapping(value="/export")
 	public String goExport() {
-		return "plugins.export";
+		return "features.export";
 	}
 	
 	@RequestMapping(value="/compressor")
 	public String goCompressor() {
-		return "plugins.compressor";
+		return "features.compressor";
 	}
 	
 	@RequestMapping(value="/aggregator")
 	public String goAggregator() {
-		return "plugins.aggregator";
+		return "features.aggregator";
 	}
 }

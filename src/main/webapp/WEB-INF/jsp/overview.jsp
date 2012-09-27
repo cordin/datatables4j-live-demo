@@ -7,18 +7,20 @@
       <a href="http://datatables.net/">
          <img src="<c:url value="/img/logo_DataTables4j.png" />" style="float:left; margin-right:20px;"/>
       </a>
-      <h3>DataTables4j examples</h3>
+      <h3>DataTables4j demo app</h3>
       <h4>Welcome !</h4>
+      <hr />
    </div>
 </div>
 
-<br />
-
 <div class="row">
    <div class="span12">
-      <div class="alert alert-info">
-         Feel free to navigate through the different tabs and the corresponding JSP to learn how to use DataTables4j.
-      </div>
+      <p>      
+         Feel free to navigate through the different tabs to see the features in action.
+      </p>
+      <p>
+         You are advised to use browser development tools like <a href="http://getfirebug.com/">Firebug</a> or <a href="http://developer.chrome.com/extensions/tut_debugging.html">built-in ones</a> to see the web resources that Datatables4j generates.
+      </p>
       </p>
    </div>
 </div>

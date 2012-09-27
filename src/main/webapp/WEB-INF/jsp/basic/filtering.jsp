@@ -1,16 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="datatables" uri="http://github.com/datatables4j"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="../common/taglib.jsp" %>
 
 <div class="row">
    <div class="span12">
       <h3>Table filtering</h3>
       <p>
-         By default, filtering is enabled but you can disable it using the <tt>filter</tt> table attribute.
+         By default, filtering is enabled but you can disable it using the <code>filter</code> table attribute.
       </p>
       <p>
-         The search top right box will disappear.
+         In the following example, the search top right box disappeared.
       </p>
       <hr />
    </div>
@@ -30,23 +28,5 @@
    </div>
 </div>
 
-<br />
-
-<div class="row">
-   <div class="span12 bs-docs-example">
-      <p>
-         Take a look at the JSP : <tt>WEB-INF/jsp/basic/filtering.jsp</tt>
-      </p>
-      <p>
-<pre class="prettyprint">
-&lt;datatables:table id="toto" data="&#36;&#123;persons&#125;" filter="false"&gt;
-   &lt;datatables:column title="Id" property="id" /&gt;
-   &lt;datatables:column title="FirstName" property="firstName" /&gt;
-   &lt;datatables:column title="LastName" property="lastName" /&gt;
-   &lt;datatables:column title="Street" property="address.street1" /&gt;
-   &lt;datatables:column title="Mail" property="mail" /&gt;
-&lt;/datatables:table&gt;
-</pre>      
-      </p>
-   </div>
-</div>
+<%-- Documentation --%>
+<doc:doc source="basic/filtering.jsp" doc="basic.filtering.html" />
