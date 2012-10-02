@@ -113,7 +113,7 @@ body {
                   </li>
                </ul>
                <ul class="nav pull-right">
-                  <li><a href="http://datatables4j.github.com/datatables4j/"><i class="icon-globe"></i> Reference</a></li>
+                  <li><a href="http://datatables4j.github.com/docs/"><i class="icon-globe"></i> Reference</a></li>
                   <li class="dropdown">
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search"></i> Help <b class="caret"></b></a>
                      <ul class="dropdown-menu">
@@ -133,7 +133,7 @@ body {
       <tiles:insertAttribute name="content" />
       <hr />
       <footer>
-         <p>DataTables4j - v0.3.0-SNAPSHOT</p>
+         <p>DataTables4j - v0.4.0-SNAPSHOT</p>
       </footer>
 
    </div>
