@@ -54,7 +54,7 @@ body {
          <div class="container">
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span>
                <span class="icon-bar"></span>
-            </a> <a class="brand" href="${home}">DataTables4j</a>
+            </a> <a class="brand" href="${home}">DataTables4j Demo</a>
             <div class="nav-collapse collapse">
                <ul class="nav">
                   <li class="<tiles:getAsString name="tabHome" />"><a href="${home}"><i class="icon-home"></i> Home</a></li>
@@ -66,10 +66,10 @@ body {
                         <li><a href="${basic}/sorting">Table sorting</a></li>
                         <li><a href="${basic}/filtering">Table filtering</a></li>
                         <li><a href="${basic}/paging">Table paging</a></li>
-                        <li><a href="${basic}/lengthchange">Change length (TODO)</a></li>
-                        <li><a href="${basic}/autowidth">Auto width (TODO)</a></li>
-                        <li><a href="${basic}/implicitObject">Using implicit object (TODO)</a></li>
-                        <li><a href="${basic}/cdn">Using CDN (TODO)</a></li>
+                        <li><a href="${basic}/lengthchange">Table length changing</a></li>
+                        <li><a href="${basic}/autowidth">Table width</a></li>
+                        <li><a href="${basic}/implicitObject">Using implicit object</a></li>
+                        <li><a href="${basic}/cdn">Using CDN</a></li>
                      </ul>
                   </li>
                   <li class="dropdown <tiles:getAsString name="tabDatasource" />">
@@ -82,11 +82,12 @@ body {
                   <li class="dropdown <tiles:getAsString name="tabAdvanced" />">
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-fire"></i> Advanced<b class="caret"></b></a>
                      <ul class="dropdown-menu">
-                        <li><a href="${advanced}/rowid">Row id (TODO)</a></li>
-                        <li><a href="${advanced}/extrafile">ExtraConf (TODO)</a></li>
-                        <li><a href="${advanced}/extraconf">ExtraFile (TODO)</a></li>
+                        <li><a href="${advanced}/rowid">Row id</a></li>
+                        <li><a href="${advanced}/i18n">Internationalisation</a></li>
+                        <li><a href="${advanced}/extrafile">Using extra file (TODO)</a></li>
+                        <li><a href="${advanced}/extraconf">Using extra conf (TODO)</a></li>
                         <li><a href="${advanced}/override">Override default configuration</a></li>
-                        <li><a href="${advanced}/multiple">Multiple tables (TODO)</a></li>
+                        <li><a href="${advanced}/multiple">Multiple tables</a></li>
                         <li><a href="${advanced}/ninja">Ninja table (TODO)</a></li>
                      </ul>
                   </li>

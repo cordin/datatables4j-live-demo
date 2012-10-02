@@ -3,23 +3,15 @@
 
 <div class="row">
    <div class="span12">
-      <h3>Row id</h3>
-      <p>
-      </p>
+      <h3>Default configuration</h3>
       <hr />
    </div>
 </div>
 
-<div class="row">   
+<div class="row">
    <div class="span12">
-      <h4>Example</h4>
-      <p>
-         Take a look at the generated row id. 
-      </p>
-   </div>
-   <div class="span12">
-   
-      <datatables:table id="myTableId" data="${persons}" rowIdBase="id" rowIdPrefix="person_">
+
+      <datatables:table id="myTableId" data="${persons}" cdn="true">
          <datatables:column title="Id" property="id" />
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />
@@ -27,9 +19,8 @@
          <datatables:column title="Mail" property="mail" />
       </datatables:table>
       
-   
    </div>
 </div>
 
 <%-- Documentation --%>
-<doc:doc source="advanced/rowid.jsp" doc="advanced.rowid.html" />
+<doc:doc source="basic/cdn.jsp" doc="basic.cdn.html" />

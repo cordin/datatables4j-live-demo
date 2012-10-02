@@ -7,7 +7,6 @@
    <div class="span12">
       <h3>DOM data source</h3>
       <p>
-         TODO
       </p>
       <hr />
    </div>
@@ -28,4 +27,4 @@
 </div>
 
 <%-- Documentation --%>
-<doc:doc source="datasource/sorting.jsp" doc="datasource.dom.html" />
+<doc:doc source="datasource/dom.jsp" doc="datasource.dom.html" />

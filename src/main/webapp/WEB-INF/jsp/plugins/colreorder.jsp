@@ -15,9 +15,6 @@
       <p>
          You just need to set the <code>colreorder</code> table attribute to <tt>true</tt> to activate the ColReorder plugin.
       </p>
-      <p>
-         By default, the height is 300px but you can configure it with the <code>scrollY</code> table attribute.
-      </p>
    </div>
    <div class="span10">
       <h4>Example</h4>

@@ -3,29 +3,27 @@
 
 <div class="row">
    <div class="span10">
-      <h3>FixedHeader</h3>
-      <p>
-         <a href="http://www.datatables.net/extras/fixedheader/" class="btn btn-success" style="float: right;">See the plugin home</a>               
-         This plugin allows you to fixed the table header by scrolling.
-      </p>
+      <h3>Plugins combo using aggregation</h3>
       <hr />
-   </div>
-   <div class="span10">
-      <h4>Usage</h4>
       <p>
-         You just need to set the <code>fixedheader</code> table attribute to <tt>true</tt> to activate the plugin.
+         Aggregation become very relevant when you use several plugins in the same table.
       </p>
    </div>
    <div class="span10">
       <h4>Example</h4>
       <p>
+         <strong>ColReorder</strong> and <strong>Scroller</strong> have been activated in the following table. Aggregation and compression too. Take a look at the generated web resources to see what changed.
+      </p>
+      <p>
          
-         <datatables:table id="myTableId" data="${persons}" fixedHeader="true" offsetTop="40">
+         <datatables:table id="myTableId" data="${persons}" scroller="true" colReorder="true">
             <datatables:column title="Id" property="id" />
             <datatables:column title="FirstName" property="firstName" />
             <datatables:column title="LastName" property="lastName" />
             <datatables:column title="Street" property="address.street1" />
             <datatables:column title="Mail" property="mail" />
+            <datatables:prop name="datatables4j.aggregator.enable" value="true"/>
+            <datatables:prop name="datatables4j.compressor.enable" value="true"/>
          </datatables:table>
          
       </p>
@@ -33,6 +31,4 @@
 </div>
 
 <%-- Documentation --%>
-<doc:doc source="plugins/fixedheader.jsp" doc="plugins.fixedheader.html" />
-  
-<div style="height: 800px;">&nbsp;</div>
+<doc:doc source="plugins/comboaggreg.jsp" doc="plugins.comboaggreg.html" />

@@ -28,7 +28,7 @@ public class BaseController {
 		return personCoordinator.get100();
 	}
 	
-	@RequestMapping(value="personsWs", method = RequestMethod.GET)
+	@RequestMapping(value="/personsWs", method = RequestMethod.GET)
 	public @ResponseBody List<Person> getPersons(){
 		return personCoordinator.get1000();
 	}

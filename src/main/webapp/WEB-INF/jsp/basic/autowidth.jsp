@@ -3,23 +3,17 @@
 
 <div class="row">
    <div class="span12">
-      <h3>Row id</h3>
+      <h3>Table width</h3>
       <p>
       </p>
       <hr />
    </div>
 </div>
 
-<div class="row">   
+<div class="row">
    <div class="span12">
-      <h4>Example</h4>
-      <p>
-         Take a look at the generated row id. 
-      </p>
-   </div>
-   <div class="span12">
-   
-      <datatables:table id="myTableId" data="${persons}" rowIdBase="id" rowIdPrefix="person_">
+
+      <datatables:table id="myTableId" data="${persons}" autoWidth="false">
          <datatables:column title="Id" property="id" />
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />
@@ -27,9 +21,8 @@
          <datatables:column title="Mail" property="mail" />
       </datatables:table>
       
-   
    </div>
 </div>
 
 <%-- Documentation --%>
-<doc:doc source="advanced/rowid.jsp" doc="advanced.rowid.html" />
+<doc:doc source="basic/autowidth.jsp" doc="basic.autowidth.html" />

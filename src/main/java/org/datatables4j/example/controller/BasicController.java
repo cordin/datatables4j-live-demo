@@ -68,6 +68,11 @@ public class BasicController extends BaseController {
 		return "basic.implicitObject";
 	}
 	
+	@RequestMapping(value="/cdn")
+	public String goCdn() {
+		return "basic.cdn";
+	}
+	
 	@RequestMapping(value="/styles")
 	public String goStyles() {
 		return "basic.styles";

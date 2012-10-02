@@ -23,6 +23,11 @@ public class AdvancedController extends BaseController {
 		return "advanced.rowid";
 	}
 	
+	@RequestMapping(value="/i18n")
+	public String goI18N() {
+		return "advanced.i18n";
+	}
+	
 	@RequestMapping(value="/extraconf")
 	public String goExtraConf() {
 		return "advanced.extraconf";

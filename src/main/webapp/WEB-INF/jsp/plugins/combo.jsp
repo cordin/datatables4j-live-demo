@@ -6,23 +6,17 @@
       <h3>Plugins combo</h3>
       <hr />
       <p>
-         You can combine several plugins in the same table. Just add the different plugin tag attributes.
+         You can combine several plugins in the same table. Just set the right tag attributes for the activation.
       </p>
-      <p>
-         You can choose different strategies for the web resource generation.
-         <ul>
-            <li>TODO</li>
-            <li>TODO</li>
-            <li>TODO</li>
-         </ul>
-      </p>
-      
       <div class=alert>
          <strong>Warning!</strong> Some limitations due to DataTables plugin's compatibility may appear. For instance, Scroller and FixedHeader plugins are still not compatibles.
       </div>
    </div>
    <div class="span10">
       <h4>Example</h4>
+      <p>
+         <strong>ColReorder</strong> and <strong>Scroller</strong> have been activated in the following table.
+      </p>
       <p>
          
          <datatables:table id="myTableId" data="${persons}" scroller="true" colReorder="true">
@@ -31,6 +25,8 @@
             <datatables:column title="LastName" property="lastName" />
             <datatables:column title="Street" property="address.street1" />
             <datatables:column title="Mail" property="mail" />
+            <datatables:prop name="datatables4j.aggregator.enable" value="true"/>
+            <datatables:prop name="datatables4j.compressor.enable" value="true"/>
          </datatables:table>
          
       </p>
@@ -38,4 +34,4 @@
 </div>
 
 <%-- Documentation --%>
-<doc:doc source="plugins/sorting.jsp" doc="plugins.fixedheader.html" />
+<doc:doc source="plugins/combo.jsp" doc="plugins.combo.html" />

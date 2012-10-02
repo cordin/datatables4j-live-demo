@@ -7,7 +7,7 @@
    <div class="span12">
       <h3>AJAX data source</h3>
       <p>
-         TODO
+         
       </p>
       <hr />
    </div>
@@ -17,13 +17,15 @@
    <div class="span12">
 
       <datatables:table id="myTableId" url="/personsWs">
-         <datatables:column title="Street" property="address.street1" sortable="false" />
-         <datatables:column title="LastName" property="lastName" />
-         <datatables:column title="Mail" property="mail" />
+           <datatables:column title="Id" property="id"/>
+           <datatables:column title="FirstName" property="firstName" />
+           <datatables:column title="LastName" property="lastName" />
+           <datatables:column title="Street" property="address.street1" />
+           <datatables:column title="Mail" property="mail" />
       </datatables:table>
       
    </div>
 </div>
 
 <%-- Documentation --%>
-<doc:doc source="datasource/sorting.jsp" doc="datasource.dom.html" />
+<doc:doc source="datasource/ajax.jsp" doc="datasource.dom.html" />

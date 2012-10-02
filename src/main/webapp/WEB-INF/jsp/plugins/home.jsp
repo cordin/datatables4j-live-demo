@@ -11,14 +11,13 @@
       </p>
       <h4>How it works</h4>
       <p>
-         In <strong>DataTables4j</strong>, native plugins are considered as "Internal plugin". That is to say all plugin sources (Javascript and/or CSS) are embedded in the framework.
-         In this way, <strong>DataTables4j</strong> is able to compress or even aggregate multiple files, depending on your configuration choice and of course, if multiple files are needed to use a plugin.
+         In <strong>DataTables4j</strong>, native plugins are considered as "internal plugin"". That is to say all plugin sources (Javascript and/or CSS) are embedded in the framework. In this way, <strong>DataTables4j</strong> is able to inject the configuration wherever it is needed, compress it or even aggregate multiple files, depending on your configuration choice and of course, if multiple files are needed to use a plugin.
       </p>
       <p>
-         For now, DataTables embeds a few native plugins, more will be added over the time.
+         For now, <strong>DataTables4j</strong> embeds a few native plugins, more will be added over the time.
       </p>
       <p>
-         Some extension points are planned, in order to allow <strong>DataTables4j</strong> to scan external plugins.
+         Some extension points are planned, in order to allow external plugins scanning.
       </p>
    </div>
    <div class="span10">

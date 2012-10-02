@@ -23,6 +23,7 @@
       <put-attribute name="navColReorder" value="" cascade="true" />
       <put-attribute name="navTableTools" value="" cascade="true" />
       <put-attribute name="navCombo" value="" cascade="true" />
+      <put-attribute name="navComboAggreg" value="" cascade="true" />
       <put-attribute name="content" value="/WEB-INF/jsp/common/pluginLayout.jsp" cascade="true" />
       <put-attribute name="pluginContent" value="" cascade="true" />
    </definition>
@@ -83,19 +84,7 @@
       <put-attribute name="content"
          value="/WEB-INF/jsp/basic/autowidth.jsp" />
    </definition>
-
-   <definition name="basic.dom" extends="mainLayout">
-      <put-attribute name="tabBasic" value="active" />
-      <put-attribute name="title" value="Pagination" />
-      <put-attribute name="content" value="/WEB-INF/jsp/basic/dom.jsp" />
-   </definition>
-
-   <definition name="basic.ajax" extends="mainLayout">
-      <put-attribute name="tabBasic" value="active" />
-      <put-attribute name="title" value="Pagination" />
-      <put-attribute name="content" value="/WEB-INF/jsp/basic/ajax.jsp" />
-   </definition>
-
+   
    <definition name="basic.implicitObject" extends="mainLayout">
       <put-attribute name="tabBasic" value="active" />
       <put-attribute name="title" value="Pagination" />
@@ -103,6 +92,13 @@
          value="/WEB-INF/jsp/basic/implicitObject.jsp" />
    </definition>
 
+   <definition name="basic.cdn" extends="mainLayout">
+      <put-attribute name="tabBasic" value="active" />
+      <put-attribute name="title" value="Using CDN" />
+      <put-attribute name="content"
+         value="/WEB-INF/jsp/basic/cdn.jsp" />
+   </definition>
+   
    <!-- Datasources examples -->
    <definition name="datasource.dom" extends="mainLayout">
       <put-attribute name="tabDatasource" value="active" />
@@ -126,6 +122,13 @@
          value="/WEB-INF/jsp/advanced/rowid.jsp" />
    </definition>
 
+   <definition name="advanced.i18n" extends="mainLayout">
+      <put-attribute name="tabAdvanced" value="active" />
+      <put-attribute name="title" value="Internationalisation" />
+      <put-attribute name="content"
+         value="/WEB-INF/jsp/advanced/internationalisation.jsp" />
+   </definition>
+   
    <definition name="advanced.extraconf" extends="mainLayout">
       <put-attribute name="tabAdvanced" value="active" />
       <put-attribute name="title" value="Default configuration" />
@@ -200,7 +203,13 @@
       <put-attribute name="navCombo" value="active" cascade="true" />
       <put-attribute name="pluginContent" value="/WEB-INF/jsp/plugins/combo.jsp" cascade="true" />
    </definition>
-
+   
+   <definition name="plugins.comboaggreg" extends="pluginLayout">
+      <put-attribute name="title" value="Plugins" />
+      <put-attribute name="navCombo" value="active" cascade="true" />
+      <put-attribute name="pluginContent" value="/WEB-INF/jsp/plugins/comboaggreg.jsp" cascade="true" />
+   </definition>
+   
    <definition name="plugins.addyourplugin" extends="pluginLayout">
       <put-attribute name="title" value="Plugins" />
       <put-attribute name="pluginContent"
@@ -212,7 +221,7 @@
       <put-attribute name="tabFeatures" value="active" />
       <put-attribute name="title" value="Features" />
       <put-attribute name="navHome" value="active" cascade="true" />
-      <put-attribute name="featureContent" value="/WEB-INF/jsp/features/home.jsp" />
+      <put-attribute name="featureContent" value="/WEB-INF/jsp/features/home.jsp" cascade="true" />
    </definition>
 
    <definition name="features.export" extends="featureLayout">
@@ -220,7 +229,7 @@
       <put-attribute name="title" value="Features" />
       <put-attribute name="navExport" value="active" cascade="true" />
       <put-attribute name="featureContent"
-         value="/WEB-INF/jsp/features/export.jsp" />
+         value="/WEB-INF/jsp/features/export.jsp" cascade="true" />
    </definition>
 
    <definition name="features.compressor" extends="featureLayout">
@@ -228,7 +237,7 @@
       <put-attribute name="title" value="Features" />
       <put-attribute name="navCompressor" value="active" cascade="true" />
       <put-attribute name="featureContent"
-         value="/WEB-INF/jsp/features/compressor.jsp" />
+         value="/WEB-INF/jsp/features/compressor.jsp" cascade="true" />
    </definition>
 
    <definition name="features.aggregator" extends="featureLayout">
@@ -236,6 +245,6 @@
       <put-attribute name="title" value="Features" />
       <put-attribute name="navAggregator" value="active" cascade="true" />
       <put-attribute name="featureContent"
-         value="/WEB-INF/jsp/features/aggregator.jsp" />
+         value="/WEB-INF/jsp/features/aggregator.jsp" cascade="true" />
    </definition>
 </tiles-definitions>
