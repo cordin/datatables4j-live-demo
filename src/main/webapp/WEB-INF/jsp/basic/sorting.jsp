@@ -10,10 +10,7 @@
 
 <div class="row">
    <div class="span12">
-      <h4>Example 1</h4>
-      <p>
-         By default, sorting is enabled but you can disable it setting the <code>sort</code> table attribute to <tt>false</tt>.
-      </p>
+      <h4>Example 1 : global sorting activation/deactivation</h4>
    </div>
    <div class="span12">
 
@@ -28,26 +25,61 @@
    </div>
 </div>
 
-<%-- Documentation --%>
-<doc:doc source="basic/sorting.jsp" doc="basic.sorting.html" />
+<br />
+
+<div class="row">   
+   <div class="span12">
+      <h4>Example 2 : individual column sorting</h4>
+   </div>
+   <div class="span12">
+   
+      <datatables:table id="mySecondTableId" data="${persons}">
+         <datatables:column title="Id" property="id" sortable="false" />
+         <datatables:column title="FirstName" property="firstName" />
+         <datatables:column title="LastName" property="lastName" />
+         <datatables:column title="Street" property="address.street1" />
+         <datatables:column title="Mail" property="mail" sortable="false" />
+      </datatables:table>
+   
+   </div>
+</div>
 
 <br />
 
 <div class="row">   
    <div class="span12">
-      <h4>Example 2</h4>
+      <h4>Example 3 : column sorting initialisation </h4>
+   </div>
+   <div class="span12">
+   
+      <datatables:table id="myThirdTableId" data="${persons}">
+         <datatables:column title="Id" property="id" sortable="false" />
+         <datatables:column title="FirstName" property="firstName" sortInit="desc" />
+         <datatables:column title="LastName" property="lastName" sortInit="desc" />
+         <datatables:column title="Street" property="address.street1" />
+         <datatables:column title="Mail" property="mail" sortable="false" />
+      </datatables:table>
+   
+   </div>
+</div>
+
+<br />
+
+<div class="row">   
+   <div class="span12">
+      <h4>Example 4 : sorting direction control</h4>
       <p>
-         Moreover, you can use the <code>sortable</code> column attribute to enable sorting on the corresponding column. 
+         Click several times on the Street and Mail header column
       </p>
    </div>
    <div class="span12">
    
-      <datatables:table id="myOtherTableId" data="${persons}">
-         <datatables:column title="Id" property="id" sortable="false"/>
+      <datatables:table id="myFourthTableId" data="${persons}">
+         <datatables:column title="Id" property="id" sortable="false" />
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />
-         <datatables:column title="Street" property="address.street1" />
-         <datatables:column title="Mail" property="mail" sortable="false"/>
+         <datatables:column title="Street" property="address.street1" sortDirection="asc" />
+         <datatables:column title="Mail" property="mail" sortDirection="desc" />
       </datatables:table>
    
    </div>

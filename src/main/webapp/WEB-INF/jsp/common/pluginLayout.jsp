@@ -17,6 +17,7 @@
             <%--<li class="<tiles:getAsString name="navTableTools" />"><a href="${plugins}/tabletools">TableTools</a></li> --%>
             <li class="<tiles:getAsString name="navCombo" />"><a href="${plugins}/combo">Combo</a></li>
             <li class="<tiles:getAsString name="navComboAggreg" />"><a href="${plugins}/comboaggreg">Combo & aggregation</a></li>
+            <li class="<tiles:getAsString name="navComboAggregCompress" />"><a href="${plugins}/comboaggregcompress">Combo, aggregation & compression</a></li>
          </ul>
       </div>
    </div>

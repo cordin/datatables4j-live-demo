@@ -11,14 +11,13 @@
 <div class="row">
    <div class="span12">
 
-      <datatables:table id="myTableId" data="${persons}">
+      <datatables:table id="myOtherTableId" data="${persons}">
          <datatables:column title="Id" property="id" />
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />
          <datatables:column title="Street" property="address.street1" />
          <datatables:column title="Mail" property="mail" />
       </datatables:table>
-      
    </div>
 </div>
 

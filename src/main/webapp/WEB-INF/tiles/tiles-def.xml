@@ -24,6 +24,7 @@
       <put-attribute name="navTableTools" value="" cascade="true" />
       <put-attribute name="navCombo" value="" cascade="true" />
       <put-attribute name="navComboAggreg" value="" cascade="true" />
+      <put-attribute name="navComboAggregCompress" value="" cascade="true" />
       <put-attribute name="content" value="/WEB-INF/jsp/common/pluginLayout.jsp" cascade="true" />
       <put-attribute name="pluginContent" value="" cascade="true" />
    </definition>
@@ -206,8 +207,14 @@
    
    <definition name="plugins.comboaggreg" extends="pluginLayout">
       <put-attribute name="title" value="Plugins" />
-      <put-attribute name="navCombo" value="active" cascade="true" />
+      <put-attribute name="navComboAggreg" value="active" cascade="true" />
       <put-attribute name="pluginContent" value="/WEB-INF/jsp/plugins/comboaggreg.jsp" cascade="true" />
+   </definition>
+   
+   <definition name="plugins.comboaggregcompress" extends="pluginLayout">
+      <put-attribute name="title" value="Plugins" />
+      <put-attribute name="navComboAggregCompress" value="active" cascade="true" />
+      <put-attribute name="pluginContent" value="/WEB-INF/jsp/plugins/comboaggregcompress.jsp" cascade="true" />
    </definition>
    
    <definition name="plugins.addyourplugin" extends="pluginLayout">

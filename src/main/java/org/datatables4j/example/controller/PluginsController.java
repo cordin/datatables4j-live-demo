@@ -48,6 +48,11 @@ public class PluginsController extends BaseController {
 	public String goComboAggreg() {
 		return "plugins.comboaggreg";
 	}
+
+	@RequestMapping(value="/comboaggregcompress")
+	public String goComboAggregCompress() {
+		return "plugins.comboaggregcompress";
+	}
 	
 	@RequestMapping(value="/addyourplugin")
 	public String goAddyourplugin() {

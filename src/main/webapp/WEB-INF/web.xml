@@ -34,7 +34,7 @@
    <servlet>
       <display-name>DataTables4j Servlet</display-name>
       <servlet-name>datatablesController</servlet-name>
-      <servlet-class>org.datatables4j.web.servlet.DatatablesServlet</servlet-class>
+      <servlet-class>org.datatables4j.core.web.servlet.DatatablesServlet</servlet-class>
    </servlet>
    
    <!-- DataTables4j servlet mapping -->

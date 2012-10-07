@@ -133,7 +133,7 @@ body {
       <tiles:insertAttribute name="content" />
       <hr />
       <footer>
-         <p>DataTables4j - v0.4.0-SNAPSHOT</p>
+         <p>DataTables4j - v0.5.0-SNAPSHOT</p>
       </footer>
 
    </div>
