@@ -10,7 +10,7 @@
 
 <div class="row">
    <div class="span12">
-
+      
       <datatables:table id="myOtherTableId" data="${persons}">
          <datatables:column title="Id" property="id" />
          <datatables:column title="FirstName" property="firstName" />
