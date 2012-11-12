@@ -1,4 +1,4 @@
-package org.datatables4j.example.controller;
+package com.github.datatables4j.demo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

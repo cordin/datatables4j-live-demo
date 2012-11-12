@@ -30,7 +30,7 @@
          <datatables:column title="LastName" property="lastName" />
          <datatables:column title="Street" property="address.street1" />
          <datatables:column title="Mail" property="mail" />
-         <datatables:prop name="datatables4j.compressor.enable" value="true"/>
+         <datatables:prop name="compressor.enable" value="true"/>
       </datatables:table>
       
    </div>

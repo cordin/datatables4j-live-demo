@@ -70,6 +70,13 @@ body {
                         <li><a href="${basic}/autowidth">Table width</a></li>
                         <li><a href="${basic}/implicitObject">Using implicit object</a></li>
                         <li><a href="${basic}/cdn">Using CDN</a></li>
+                        <li class="dropdown-submenu">
+                           <a href="#">Styling</a>
+                           <ul class="dropdown-menu">
+                             <li><a href="${basic}/styling/table">Styling table</a></li>
+                             <li><a href="${basic}/styling/other-elements">Styling other elements</a></li>
+                           </ul>
+                         </li>
                      </ul>
                   </li>
                   <li class="dropdown <tiles:getAsString name="tabDatasource" />">
@@ -133,7 +140,7 @@ body {
       <tiles:insertAttribute name="content" />
       <hr />
       <footer>
-         <p>DataTables4j - v0.5.0-SNAPSHOT</p>
+         <p>DataTables4j - v0.6.1</p>
       </footer>
 
    </div>

@@ -1,4 +1,4 @@
-package org.datatables4j.example.entity;
+package com.github.datatables4j.demo.entity;
 
 /**
  * A typical P entity.

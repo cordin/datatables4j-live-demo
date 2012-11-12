@@ -13,6 +13,7 @@
       <appender-ref ref="STDOUT" />
    </root>
 
-   <logger name="org.datatables4j" level="DEBUG" />
+   <logger name="com.github.datatables4j" level="DEBUG" />
+   <logger name="com.github.datatables4j.plugins" level="DEBUG" />
 
 </configuration>

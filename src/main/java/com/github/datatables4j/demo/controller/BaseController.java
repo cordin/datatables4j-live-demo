@@ -1,15 +1,16 @@
-package org.datatables4j.example.controller;
+package com.github.datatables4j.demo.controller;
 
 import java.util.List;
 
-import org.datatables4j.example.entity.Person;
-import org.datatables4j.example.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.github.datatables4j.demo.entity.Person;
+import com.github.datatables4j.demo.service.PersonService;
 
 
 /**

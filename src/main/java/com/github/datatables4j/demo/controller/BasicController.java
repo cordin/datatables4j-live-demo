@@ -1,4 +1,4 @@
-package org.datatables4j.example.controller;
+package com.github.datatables4j.demo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -73,8 +73,13 @@ public class BasicController extends BaseController {
 		return "basic.cdn";
 	}
 	
-	@RequestMapping(value="/styles")
-	public String goStyles() {
-		return "basic.styles";
+	@RequestMapping(value="/styling/table")
+	public String goStylingTable() {
+		return "basic.styling.table";
+	}
+	
+	@RequestMapping(value="/styling/other-elements")
+	public String goStylingOtherElements() {
+		return "basic.styling.other.elements";
 	}
 }

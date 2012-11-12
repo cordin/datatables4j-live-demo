@@ -1,9 +1,10 @@
-package org.datatables4j.example.service;
+package com.github.datatables4j.demo.service;
 
 import java.util.List;
 
-import org.datatables4j.example.entity.Person;
 import org.springframework.stereotype.Service;
+
+import com.github.datatables4j.demo.entity.Person;
 
 
 /**

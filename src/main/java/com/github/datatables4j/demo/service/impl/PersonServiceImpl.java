@@ -1,13 +1,14 @@
-package org.datatables4j.example.service.impl;
+package com.github.datatables4j.demo.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.datatables4j.example.entity.Address;
-import org.datatables4j.example.entity.Person;
-import org.datatables4j.example.entity.Town;
-import org.datatables4j.example.service.PersonService;
 import org.springframework.stereotype.Service;
+
+import com.github.datatables4j.demo.entity.Address;
+import com.github.datatables4j.demo.entity.Person;
+import com.github.datatables4j.demo.entity.Town;
+import com.github.datatables4j.demo.service.PersonService;
 
 
 /**
