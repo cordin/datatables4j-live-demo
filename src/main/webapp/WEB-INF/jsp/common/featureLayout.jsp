@@ -13,6 +13,7 @@
             <li class="<tiles:getAsString name="navHome" />"><a href="${featuresUrl}/home">Home</a></li>
             <li class="<tiles:getAsString name="navCompressor" />"><a href="${featuresUrl}/compressor">Compressor</a></li>
             <li class="<tiles:getAsString name="navAggregator" />"><a href="${featuresUrl}/aggregator">Aggregator</a></li>
+            <li class="<tiles:getAsString name="navExport" />"><a href="${featuresUrl}/export">Export</a></li>
          </ul>
       </div>
    </div>

@@ -115,7 +115,7 @@ body {
                         <li><a href="${features}/home">Home (TODO)</a></li>
                         <li><a href="${features}/compressor">Compressor (TODO)</a></li>
                         <li><a href="${features}/aggregator">Aggregator (TODO)</a></li>
-                        <%--<li><a href="${features}/export">Export (TODO)</a></li> --%>
+                        <li><a href="${features}/export">Export (TODO)</a></li>
                      </ul>
                   </li>
                </ul>
@@ -138,6 +138,7 @@ body {
    <div class="container">
 
       <tiles:insertAttribute name="content" />
+      
       <hr />
       <footer>
          <p>DataTables4j - v0.6.1</p>

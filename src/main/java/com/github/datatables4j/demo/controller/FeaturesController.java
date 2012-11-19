@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * Controller for the features examples management.
  * 
- * @author tduchateau
+ * @author Thibault Duchateau
  */
 @Controller
 @RequestMapping(value = "/features", method = RequestMethod.GET)
