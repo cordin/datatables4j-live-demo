@@ -23,14 +23,15 @@
 <div class="row">
    <div class="span12">
       
-      <datatables:table id="myTableId" data="${persons}" export="true">
+      <datatables:table id="myTableId" data="${persons}" export="true" exportButtons="BOTTOM_MIDDLE,TOP_RIGHT">
          <datatables:column title="Id" property="id" />
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />
          <datatables:column title="Street" property="address.street1" />
          <datatables:column title="Mail" property="mail" />
-         <datatables:export id="dt4j-export-csv" type="CSV" fileName="monExport" cssClass="btn" label="Export CSV" />
-         <datatables:export id="dt4j-export-xml" type="XML" fileName="monExport-xml" cssClass="btn" label="XML" />
+         <datatables:prop name="compressor.enable" value="false"/>
+         <datatables:export id="dt4j-export-csv" type="CSV" fileName="monExport" cssClass="btn" />
+         <datatables:export id="dt4j-export-xml" type="XML" fileName="monExport-xml" cssClass="btn" />
       </datatables:table>
       
    </div>

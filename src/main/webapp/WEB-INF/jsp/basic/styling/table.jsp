@@ -14,7 +14,7 @@
    </div>
    <div class="span12">
 
-      <datatables:table id="myTableId" data="${persons}" sort="false">
+      <datatables:table cssClass="table table-striped table-bordered" id="myTableId" data="${persons}" sort="false">
          <datatables:column title="Id" property="id"/>
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />

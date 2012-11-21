@@ -20,8 +20,8 @@
          <datatables:column title="Street" property="address.street1" sortable="false" />
          <datatables:column title="Mail" property="mail" />
          <datatables:extraConf src="/js/datatables.extraConf.js" />
-         <datatables:prop name="datatables4j.compressor.enable" value="false"/>
-         <datatables:prop name="datatables4j.aggregator.enable" value="false"/>
+         <datatables:prop name="compressor.enable" value="false"/>
+         <datatables:prop name="aggregator.enable" value="false"/>
       </datatables:table>
       
    </div>

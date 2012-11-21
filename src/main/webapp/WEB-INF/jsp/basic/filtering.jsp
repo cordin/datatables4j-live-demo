@@ -67,7 +67,7 @@
 
 <div class="row">
    <div class="span12">
-      <h4>Example 4 : specific column filtering using both input fields and select box</h4>
+      <h4>Example 4 : specific column filtering using both input fields and select boxes</h4>
    </div>
    <div class="span12">
    
