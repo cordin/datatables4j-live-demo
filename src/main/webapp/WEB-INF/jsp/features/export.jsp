@@ -10,28 +10,79 @@
 
 <div class="row">
    <div class="span10">
-      <h4>Introduction</h4>
-      <p>
-         Depending on the plugins you use (or not), <strong>DataTables4j</strong> can generate several web resources and bring about several more or less big HTTP GET requests.
-      </p>
-      <p>
-         However, you can choose to enable <i>web resources aggregation</i> (disabled by default) setting the property <code>datatables4j.aggregator.enable</code> to <tt>true</tt>.
-      </p>
+      <h4>Example 1 : default configuration</h4>
    </div>
-</div>
-
-<div class="row">
-   <div class="span12">
+   <div class="span10">
       
-      <datatables:table id="myTableId" data="${persons}" export="true" exportButtons="BOTTOM_MIDDLE,TOP_RIGHT">
+      <datatables:table id="myTableId" data="${persons}" export="true">
          <datatables:column title="Id" property="id" />
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />
          <datatables:column title="Street" property="address.street1" />
          <datatables:column title="Mail" property="mail" />
-         <datatables:prop name="compressor.enable" value="false"/>
-         <datatables:export id="dt4j-export-csv" type="CSV" fileName="monExport" cssClass="btn" />
-         <datatables:export id="dt4j-export-xml" type="XML" fileName="monExport-xml" cssClass="btn" />
+      </datatables:table>
+      
+   </div>
+</div>
+
+<br />
+
+<div class="row">
+   <div class="span10">
+      <h4>Example 2 : customizing export links</h4>
+   </div>
+   <div class="span10">
+      
+      <datatables:table id="mySecondTableId" data="${persons}" export="true">
+         <datatables:column title="Id" property="id" />
+         <datatables:column title="FirstName" property="firstName" />
+         <datatables:column title="LastName" property="lastName" />
+         <datatables:column title="Street" property="address.street1" />
+         <datatables:column title="Mail" property="mail" />         
+         <datatables:export type="CSV" cssClass="btn btn-success" />
+         <datatables:export type="XML" cssClass="btn btn-info" />
+      </datatables:table>
+      
+   </div>
+</div>
+
+<br />
+
+<div class="row">
+   <div class="span10">
+      <h4>Example 3 : repeating export links</h4>
+   </div>
+   <div class="span10">
+      
+      <datatables:table id="myThirdTableId" data="${persons}" export="true" exportLinks="TOP_RIGHT,BOTTOM_RIGHT">
+         <datatables:column title="Id" property="id" />
+         <datatables:column title="FirstName" property="firstName" />
+         <datatables:column title="LastName" property="lastName" />
+         <datatables:column title="Street" property="address.street1" />
+         <datatables:column title="Mail" property="mail" />         
+         <datatables:export type="CSV" cssClass="btn btn-info" />
+         <datatables:export type="XML" cssClass="btn btn-info" />
+      </datatables:table>
+      
+   </div>
+</div>
+
+<br />
+
+<div class="row">
+   <div class="span10">
+      <h4>Example 4 : customizing export content</h4>
+   </div>
+   <div class="span10"> 
+
+      <datatables:table id="myFourthTableId" data="${persons}" export="true">
+         <datatables:column title="Id" property="id" />
+         <datatables:column title="FirstName" property="firstName" />
+         <datatables:column title="LastName" property="lastName" />
+         <datatables:column title="Street" property="address.street1" />
+         <datatables:column title="Mail" property="mail" />         
+         <datatables:export type="CSV" includeHeader="false" fileName="my-export-name" cssClass="btn" label="CSV without header" />
+         <datatables:export type="XML" fileName="my-other-export-name" cssClass="btn" />
       </datatables:table>
       
    </div>
