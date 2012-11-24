@@ -147,7 +147,7 @@ body {
       
       <hr />
       <footer>
-         <p>DataTables4j - v0.6.1</p>
+         <p>DataTables4j - v0.6.1-SNAPSHOT</p>
       </footer>
 
    </div>
