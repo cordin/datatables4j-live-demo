@@ -81,8 +81,7 @@
          <datatables:column title="LastName" property="lastName" />
          <datatables:column title="Street" property="address.street1" />
          <datatables:column title="Mail" property="mail" />         
-         <datatables:export type="CSV" includeHeader="false" fileName="my-export-name" cssClass="btn" label="CSV without header" />
-         <datatables:export type="XML" fileName="my-other-export-name" cssClass="btn" />
+         <datatables:export type="CSV" includeHeader="false" fileName="my-export-name" cssClass="btn" label="CSV without header row" />
       </datatables:table>
       
    </div>

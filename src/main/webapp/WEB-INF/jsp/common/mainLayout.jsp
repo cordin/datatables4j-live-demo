@@ -91,11 +91,11 @@ body {
                      <ul class="dropdown-menu">
                         <li><a href="${advanced}/rowid">Row id</a></li>
                         <li><a href="${advanced}/i18n">Internationalisation</a></li>
-                        <li><a href="${advanced}/extrafile">Using extra file (TODO)</a></li>
-                        <li><a href="${advanced}/extraconf">Using extra conf (TODO)</a></li>
+                        <li><a href="${advanced}/extrafile">Using extra file</a></li>
+                        <li><a href="${advanced}/extraconf">Using extra conf</a></li>
                         <li><a href="${advanced}/override">Override default configuration</a></li>
                         <li><a href="${advanced}/multiple">Multiple tables</a></li>
-                        <li><a href="${advanced}/ninja">Ninja table (TODO)</a></li>
+                        <%--<li><a href="${advanced}/ninja">Ninja table (TODO)</a></li> --%>
                      </ul>
                   </li>
                   <li class="dropdown <tiles:getAsString name="tabPlugins" />">
@@ -115,12 +115,18 @@ body {
                         <li><a href="${features}/home">Home (TODO)</a></li>
                         <li><a href="${features}/compressor">Compressor (TODO)</a></li>
                         <li><a href="${features}/aggregator">Aggregator (TODO)</a></li>
-                        <li><a href="${features}/export">Export (TODO)</a></li>
+                        <li><a href="${features}/export">Export</a></li>
                      </ul>
                   </li>
                </ul>
                <ul class="nav pull-right">
-                  <li><a href="http://datatables4j.github.com/docs/"><i class="icon-globe"></i> Reference</a></li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-globe"></i> Reference <b class="caret"></b></a>
+                     <ul class="dropdown-menu">
+                        <li><a href="http://datatables4j.github.com/docs/">DataTables4j</a></li>
+                        <li><a href="http://datatables.net/">DataTables</a></li>
+                     </ul>
+                  </li>
                   <li class="dropdown">
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search"></i> Help <b class="caret"></b></a>
                      <ul class="dropdown-menu">

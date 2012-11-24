@@ -3,9 +3,7 @@
 
 <div class="row">
    <div class="span12">
-      <h3>Using extra conf</h3>
-      <p>
-      </p>
+      <h3>Using extra configuration</h3>
       <hr />
    </div>
 </div>
@@ -13,19 +11,17 @@
 <div class="row">
    <div class="span12">
 
-      <datatables:table id="myTableId" data="${persons}" row="person" rowIdBase="id" rowIdPrefix="toto_">
+      <datatables:table id="myTableId" data="${persons}">
          <datatables:column title="Id" property="id" />
          <datatables:column title="Firstname" property="firstName" />
          <datatables:column title="LastName" property="lastName" />
          <datatables:column title="Street" property="address.street1" sortable="false" />
          <datatables:column title="Mail" property="mail" />
          <datatables:extraConf src="/js/datatables.extraConf.js" />
-         <datatables:prop name="compressor.enable" value="false"/>
-         <datatables:prop name="aggregator.enable" value="false"/>
       </datatables:table>
       
    </div>
 </div>
 
 <%-- Documentation --%>
-<doc:doc source="advanced/extrafile.jsp" doc="advanced.extrafile.html" />
+<doc:doc source="advanced/extraconf.jsp" doc="advanced.extraconf.html" />
