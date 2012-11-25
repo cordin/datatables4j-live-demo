@@ -19,12 +19,10 @@
 <link href="<c:url value="/css/bootstrap.min.css" />" rel="stylesheet">
 <link href="<c:url value="/css/jquery.dataTables.css" />" rel="stylesheet">
 <link href="<c:url value="/css/poc.css" />" rel="stylesheet">
-<link href="<c:url value="/css/prettify.css" />" rel="stylesheet" />
 
 <script src="<c:url value="/js/jquery-1.7.2.min.js" />"></script>
 <script src="<c:url value="/js/bootstrap.min.js" />"></script>
 <script src="<c:url value="/js/jquery.dataTables.js" />"></script>
-<script src="<c:url value="/js/prettify.js" />"></script>
 
 <style type="text/css">
 body {

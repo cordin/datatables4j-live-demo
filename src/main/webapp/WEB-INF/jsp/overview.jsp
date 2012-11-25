@@ -21,6 +21,5 @@
       <p>
          You are advised to use browser development tools like <a href="http://getfirebug.com/">Firebug</a> or <a href="http://developer.chrome.com/extensions/tut_debugging.html">built-in ones</a> to see the web resources that Datatables4j generates.
       </p>
-      </p>
    </div>
 </div>
