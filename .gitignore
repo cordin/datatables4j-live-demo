@@ -8,3 +8,4 @@
 
 #Maven
 target/
+/src/main/java/rebel.xml
