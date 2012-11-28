@@ -68,6 +68,7 @@ body {
                         <li><a href="${basic}/autowidth">Table width</a></li>
                         <li><a href="${basic}/implicitObject">Using implicit object</a></li>
                         <li><a href="${basic}/cdn">Using CDN</a></li>
+                        <%--
                         <li class="dropdown-submenu">
                            <a href="#">Styling</a>
                            <ul class="dropdown-menu">
@@ -75,6 +76,7 @@ body {
                              <li><a href="${basic}/styling/other-elements">Styling other elements</a></li>
                            </ul>
                          </li>
+                          --%>
                      </ul>
                   </li>
                   <li class="dropdown <tiles:getAsString name="tabDatasource" />">
@@ -96,6 +98,15 @@ body {
                         <%--<li><a href="${advanced}/ninja">Ninja table (TODO)</a></li> --%>
                      </ul>
                   </li>
+                  <li class="dropdown <tiles:getAsString name="tabFeatures" />">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-list"></i> Features<b class="caret"></b></a>
+                     <ul class="dropdown-menu">
+                        <li><a href="${features}/home">Home</a></li>
+                        <li><a href="${features}/compressor">Compressor</a></li>
+                        <li><a href="${features}/aggregator">Aggregator</a></li>
+                        <li><a href="${features}/export">Export</a></li>
+                     </ul>
+                  </li>
                   <li class="dropdown <tiles:getAsString name="tabPlugins" />">
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-plus"></i> Plugins<b class="caret"></b></a>
                      <ul class="dropdown-menu">
@@ -105,15 +116,6 @@ body {
                         <li><a href="${plugins}/colreorder">ColReorder</a></li>
                         <%--<li><a href="${plugins}/tabletools">TableTools</a></li> --%>
                         <li><a href="${plugins}/combo">Plugins combo </a></li>
-                     </ul>
-                  </li>
-                  <li class="dropdown <tiles:getAsString name="tabFeatures" />">
-                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-list"></i> Features<b class="caret"></b></a>
-                     <ul class="dropdown-menu">
-                        <li><a href="${features}/home">Home (TODO)</a></li>
-                        <li><a href="${features}/compressor">Compressor (TODO)</a></li>
-                        <li><a href="${features}/aggregator">Aggregator (TODO)</a></li>
-                        <li><a href="${features}/export">Export</a></li>
                      </ul>
                   </li>
                </ul>

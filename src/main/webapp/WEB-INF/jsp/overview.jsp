@@ -7,7 +7,7 @@
       <a href="http://datatables.net/">
          <img src="<c:url value="/img/logo_DataTables4j.png" />" style="float:left; margin-right:20px;"/>
       </a>
-      <h3>DataTables4j demo app</h3>
+      <h3>Live DataTables4j demo</h3>
       <h4>Welcome !</h4>
       <hr />
    </div>
