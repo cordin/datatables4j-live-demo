@@ -128,7 +128,7 @@ body {
                   <li class="dropdown">
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search"></i> Help <b class="caret"></b></a>
                      <ul class="dropdown-menu">
-                        <li><a href="https://github.com/datatables4j/datatables4j-core/issues">Issues / Enhancements</a></li>
+                        <li><a href="https://github.com/datatables4j/issues/issues">Issues / Enhancements</a></li>
                         <li><a href="http://datatables.net/forums/discussion/10138/">DataTables forum</a></li>
                      </ul>
                   </li>
