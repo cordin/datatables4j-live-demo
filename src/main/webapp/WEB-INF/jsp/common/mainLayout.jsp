@@ -68,15 +68,15 @@ body {
                         <li><a href="${basic}/autowidth">Table width</a></li>
                         <li><a href="${basic}/implicitObject">Using implicit object</a></li>
                         <li><a href="${basic}/cdn">Using CDN</a></li>
-                        <%--
+                        
                         <li class="dropdown-submenu">
                            <a href="#">Styling</a>
                            <ul class="dropdown-menu">
                              <li><a href="${basic}/styling/table">Styling table</a></li>
-                             <li><a href="${basic}/styling/other-elements">Styling other elements</a></li>
+                             <li><a href="${basic}/styling/pagination">Styling pagination</a></li>
                            </ul>
                          </li>
-                          --%>
+
                      </ul>
                   </li>
                   <li class="dropdown <tiles:getAsString name="tabDatasource" />">

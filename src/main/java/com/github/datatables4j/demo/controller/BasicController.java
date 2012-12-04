@@ -78,6 +78,11 @@ public class BasicController extends BaseController {
 		return "basic.styling.table";
 	}
 	
+	@RequestMapping(value="/styling/pagination")
+	public String goStylingPagination() {
+		return "basic.styling.pagination";
+	}
+	
 	@RequestMapping(value="/styling/other-elements")
 	public String goStylingOtherElements() {
 		return "basic.styling.other.elements";

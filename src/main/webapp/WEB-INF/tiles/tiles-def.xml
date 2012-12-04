@@ -104,7 +104,14 @@
       <put-attribute name="tabBasic" value="active" />
       <put-attribute name="title" value="Styling table" />
       <put-attribute name="content"
-         value="/WEB-INF/jsp/basic/styling/table.jsp" />
+         value="/WEB-INF/jsp/basic/styling/styling-table.jsp" />
+   </definition>
+   
+   <definition name="basic.styling.pagination" extends="mainLayout">
+      <put-attribute name="tabBasic" value="active" />
+      <put-attribute name="title" value="Styling table" />
+      <put-attribute name="content"
+         value="/WEB-INF/jsp/basic/styling/styling-pagination.jsp" />
    </definition>
    
    <definition name="basic.styling.other.element" extends="mainLayout">
