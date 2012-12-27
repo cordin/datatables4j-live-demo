@@ -2,7 +2,7 @@
 <%@ include file="../common/taglib.jsp" %>
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
       <h3>Row id</h3>
       <p>
       </p>
@@ -11,13 +11,13 @@
 </div>
 
 <div class="row">   
-   <div class="span12">
+   <div class="span9">
       <h4>Example</h4>
       <p>
          Take a look at the generated row id. 
       </p>
    </div>
-   <div class="span12">
+   <div class="span9">
    
       <datatables:table id="myTableId" data="${persons}" rowIdBase="id" rowIdPrefix="person_">
          <datatables:column title="Id" property="id" />

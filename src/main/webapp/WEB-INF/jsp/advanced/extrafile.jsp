@@ -2,17 +2,17 @@
 <%@ include file="../common/taglib.jsp"%>
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
       <h3>Using extra file</h3>
       <hr />
    </div>
 </div>
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
       <h4>Example : custom row filtering</h4>
    </div>
-   <div class="span12" style="text-align: center;">
+   <div class="span9" style="text-align: center;">
       <br />
       <p>
          <select class="input-medium" id="lastNameChoice">
@@ -25,7 +25,7 @@
          </select> <i class="icon-arrow-left"></i> try to change the selected item
       </p>
    </div>
-   <div class="span12">
+   <div class="span9">
 
       <datatables:table id="myTableId" data="${persons}">
          <datatables:column title="Id" property="id" />

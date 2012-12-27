@@ -2,7 +2,7 @@
 <%@ include file="../common/taglib.jsp" %>
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
       <h3>Multiple tables</h3>
       <p>
          DataTables4j can handle multiple tables on the same page.
@@ -15,7 +15,7 @@
 </div>
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
 
       <datatables:table id="myTableId" data="${persons}" row="person" rowIdBase="id" rowIdPrefix="toto_">
          <datatables:column title="Id" property="id" />
@@ -31,7 +31,7 @@
 <br />
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
 
       <datatables:table id="myOtherTableId" data="${persons}" row="person" rowIdBase="id" rowIdPrefix="toto_">
          <datatables:column title="Id" property="id" />

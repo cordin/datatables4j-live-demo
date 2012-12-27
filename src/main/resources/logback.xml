@@ -9,11 +9,12 @@
       </encoder>
    </appender>
 
-   <root level="INFO">
+   <root level="DEBUG">
       <appender-ref ref="STDOUT" />
    </root>
 
    <logger name="com.github.datatables4j" level="DEBUG" />
    <logger name="com.github.datatables4j.plugins" level="DEBUG" />
+   <logger name="org.apache.tiles" level="DEBUG" />
 
 </configuration>

@@ -2,7 +2,7 @@
 <%@ include file="../common/taglib.jsp" %>
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
       <h3>Table paging</h3>
       <p>
          By default, pagination is enabled but you can disable it using the <code>paginate</code> table attribute.
@@ -15,7 +15,7 @@
 </div>
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
 
       <datatables:table id="myTableId" data="${persons}" paginationType="full_numbers">
          <datatables:column title="Id" property="id" />

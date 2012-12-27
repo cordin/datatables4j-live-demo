@@ -2,7 +2,7 @@
 <%@ include file="../common/taglib.jsp" %>
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
       <h3>Table length changing</h3>
       <p>
          You can enable or disable the capability to change the number of result per page using the <code>lengthChange</code> table attribute.
@@ -12,7 +12,7 @@
 </div>
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
 
       <datatables:table id="myTableId" data="${persons}" lengthChange="false">
          <datatables:column title="Id" property="id" />

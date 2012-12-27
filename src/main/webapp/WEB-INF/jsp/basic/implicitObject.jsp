@@ -2,7 +2,7 @@
 <%@ include file="../common/taglib.jsp" %>
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
       <h3>Using implicit object</h3>
       <p>
       </p>
@@ -11,7 +11,7 @@
 </div>
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
 
       <datatables:table id="myTableId" data="${persons}" row="person">
         <datatables:column title="Id" property="id" />

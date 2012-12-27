@@ -2,7 +2,7 @@
 <%@ include file="../common/taglib.jsp" %>
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
       <h3>Table informations</h3>
       <p>
          You can display (or hide) the table informations using the <code>info</code> table attribute.
@@ -12,7 +12,7 @@
 </div>
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
 
       <datatables:table id="myTableId" data="${persons}" info="false">
          <datatables:column title="Id" property="id" />

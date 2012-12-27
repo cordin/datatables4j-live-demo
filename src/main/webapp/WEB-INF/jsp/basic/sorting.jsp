@@ -2,17 +2,17 @@
 <%@ include file="../common/taglib.jsp" %>
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
       <h3>Table sorting</h3>
       <hr />
    </div>
 </div>
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
       <h4>Example 1 : global sorting activation/deactivation</h4>
    </div>
-   <div class="span12">
+   <div class="span9">
 
       <datatables:table id="myTableId" data="${persons}" sort="false">
          <datatables:column title="Id" property="id"/>
@@ -28,10 +28,10 @@
 <br />
 
 <div class="row">   
-   <div class="span12">
+   <div class="span9">
       <h4>Example 2 : individual column sorting</h4>
    </div>
-   <div class="span12">
+   <div class="span9">
    
       <datatables:table id="mySecondTableId" data="${persons}">
          <datatables:column title="Id" property="id" sortable="false" />
@@ -47,10 +47,10 @@
 <br />
 
 <div class="row">   
-   <div class="span12">
+   <div class="span9">
       <h4>Example 3 : column sorting initialisation </h4>
    </div>
-   <div class="span12">
+   <div class="span9">
    
       <datatables:table id="myThirdTableId" data="${persons}">
          <datatables:column title="Id" property="id" sortable="false" />
@@ -66,13 +66,13 @@
 <br />
 
 <div class="row">   
-   <div class="span12">
+   <div class="span9">
       <h4>Example 4 : sorting direction control</h4>
       <p>
          Click several times on the Street and Mail header column
       </p>
    </div>
-   <div class="span12">
+   <div class="span9">
    
       <datatables:table id="myFourthTableId" data="${persons}">
          <datatables:column title="Id" property="id" sortable="false" />

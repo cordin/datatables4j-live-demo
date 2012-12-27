@@ -3,8 +3,8 @@
    <modelVersion>4.0.0</modelVersion>
 
    <groupId>com.github.datatables4j</groupId>
-   <artifactId>datatables4j-examples</artifactId>
-   <version>0.6.1-SNAPSHOT</version>
+   <artifactId>datatables4j-demo-jsp</artifactId>
+   <version>0.7.1-SNAPSHOT</version>
    <packaging>war</packaging>
 
    <name>DataTables4j :: Demo :: Main demo</name>
@@ -20,20 +20,20 @@
       <!-- Internal dependencies -->
       <dependency>
          <groupId>com.github.datatables4j</groupId>
-         <artifactId>datatables4j-core</artifactId>
+         <artifactId>datatables4j-core-jsp</artifactId>
          <version>0.7.1-SNAPSHOT</version>
       </dependency>
 
       <dependency>
          <groupId>com.github.datatables4j</groupId>
          <artifactId>datatables4j-compression-yui</artifactId>
-         <version>0.3.1</version>
+         <version>0.3.2-SNAPSHOT</version>
       </dependency>
 
       <dependency>
          <groupId>com.github.datatables4j</groupId>
          <artifactId>datatables4j-ajax-jersey</artifactId>
-         <version>0.3.1</version>
+         <version>0.3.2-SNAPSHOT</version>
       </dependency>
 
       <dependency>
@@ -41,7 +41,19 @@
          <artifactId>datatables4j-export-poi</artifactId>
          <version>0.1.0-SNAPSHOT</version>
       </dependency>
-
+      
+      <dependency>
+         <groupId>com.github.datatables4j</groupId>
+         <artifactId>datatables4j-export-poi-ooxml</artifactId>
+         <version>0.1.0-SNAPSHOT</version>
+      </dependency>
+      
+      <dependency>
+         <groupId>com.github.datatables4j</groupId>
+         <artifactId>datatables4j-export-itext</artifactId>
+         <version>0.1.0-SNAPSHOT</version>
+      </dependency>
+      
       <!-- JSTL -->
       <dependency>
          <groupId>jstl</groupId>

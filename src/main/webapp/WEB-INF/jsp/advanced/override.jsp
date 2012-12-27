@@ -2,7 +2,7 @@
 <%@ include file="../common/taglib.jsp" %>
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
       <h3>Override defaults configuration</h3>
       <p>
          By default, DataTables4j internally uses a properties file containing all needed configuration. But there are two ways to override it.
@@ -22,7 +22,7 @@
 </div>
 
 <div class="row">
-   <div class="span12">
+   <div class="span9">
 
       <datatables:table id="myTableId" data="${persons}">
          <datatables:column title="Id" property="id" />
