@@ -16,7 +16,7 @@
    </div>
    <div class="span9">
       
-      <datatables:table id="mySecondTableId" data="${persons}" export="true">
+      <datatables:table id="myFirstTableId" data="${persons}" export="csv,xml">
          <datatables:column title="Id" property="id" />
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />
@@ -37,7 +37,28 @@
    </div>
    <div class="span9">
       
-      <datatables:table id="myThirdTableId" data="${persons}" export="true" exportLinks="TOP_RIGHT,BOTTOM_RIGHT">
+      <datatables:table id="mySecondTableId" data="${persons}" export="csv,xml" exportLinks="TOP_RIGHT,BOTTOM_RIGHT">
+         <datatables:column title="Id" property="id" />
+         <datatables:column title="FirstName" property="firstName" />
+         <datatables:column title="LastName" property="lastName" />
+         <datatables:column title="Street" property="address.street1" />
+         <datatables:column title="Mail" property="mail" />         
+         <datatables:export type="CSV" cssClass="btn btn-info" />
+         <datatables:export type="XML" cssClass="btn btn-info" />
+      </datatables:table>
+      
+   </div>
+</div>
+
+<br />
+
+<div class="row">
+   <div class="span9">
+      <h4>Example 3 : change position</h4>
+   </div>
+   <div class="span9">
+      
+      <datatables:table id="myThirdTableId" data="${persons}" export="csv,xml" exportLinks="TOP_LEFT,BOTTOM_RIGHT">
          <datatables:column title="Id" property="id" />
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />

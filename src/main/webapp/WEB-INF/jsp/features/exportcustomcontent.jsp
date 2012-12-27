@@ -22,15 +22,14 @@
    </div>
    <div class="span9"> 
 
-      <datatables:table id="myFirstTableId" data="${persons}" row="person" export="true">
+      <datatables:table id="myFirstTableId" data="${persons}" row="person" export="csv">
          <datatables:column title="Id" property="id" />
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />
          <datatables:column title="Street" property="address.street1" />
-         <datatables:column title="Mail" display="HTML">
+         <datatables:column title="Mail">
             <a href="mailto:${person.mail}">${person.mail}</a>
          </datatables:column>
-         <datatables:column title="Mail" property="mail" display="CSV" />
          <datatables:export type="CSV" includeHeader="false" fileName="my-export-name" cssClass="btn" label="CSV without header row" />
       </datatables:table>
       
@@ -45,11 +44,36 @@
    </div>
    <div class="span9"> 
 
-      <datatables:table id="mySecondTableId" data="${persons}" row="person" export="true">
+      <datatables:table id="mySecondTableId" data="${persons}" row="person" export="xls">
          <datatables:column title="Id" property="id" />
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />
          <datatables:column title="Street" property="address.street1" />
+         <datatables:column title="Mail">
+            <a href="mailto:${person.mail}">${person.mail}</a>
+         </datatables:column>
+         <datatables:export type="XLS" autoSize="true" fileName="my-export-name" cssClass="btn" label="XLS" />
+      </datatables:table>
+      
+   </div>
+</div>
+
+<br />
+
+<div class="row">
+   <div class="span9">
+      <h4>Example 3 : hide one or more columns in the export content</h4>
+      <p>
+         In the following example, the "Street" column is not exported.
+      </p>
+   </div>
+   <div class="span9"> 
+
+      <datatables:table id="myThirdTableId" data="${persons}" row="person" export="xls">
+         <datatables:column title="Id" property="id" />
+         <datatables:column title="FirstName" property="firstName" />
+         <datatables:column title="LastName" property="lastName" />
+         <datatables:column title="Street" property="address.street1" display="HTML" />
          <datatables:column title="Mail" display="HTML">
             <a href="mailto:${person.mail}">${person.mail}</a>
          </datatables:column>
@@ -64,14 +88,14 @@
 
 <div class="row">
    <div class="span9">
-      <h4>Example 3 : choose what column to display in which format</h4>
+      <h4>Example 4 : change any column's content for the export</h4>
       <p>
-         You may need to have 
+         In the following example, we don't want HTML code to be displayed in the exported "Mail" column.
       </p>
    </div>
    <div class="span9"> 
 
-      <datatables:table id="myThirdTableId" data="${persons}" row="person" export="true">
+      <datatables:table id="myFourthTableId" data="${persons}" row="person" export="pdf">
          <datatables:column title="Id" property="id" />
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />
@@ -79,8 +103,9 @@
          <datatables:column title="Mail" display="HTML">
             <a href="mailto:${person.mail}">${person.mail}</a>
          </datatables:column>
-         <datatables:column title="Mail" property="mail" display="CSV,XLS" />
-         <datatables:export type="XLS" includeHeader="true" fileName="my-export-name" cssClass="btn" label="XLS" />
+         <datatables:column title="Mail" property="mail" display="CSV,XLS,PDF" />
+         <datatables:export type="XLS" includeHeader="true" fileName="my-export-name" cssClass="btn" />
+         <datatables:export type="PDF" includeHeader="true" fileName="my-export-name" cssClass="btn" />
       </datatables:table>
       
    </div>

@@ -23,7 +23,6 @@
             <a href="mailto:${person.mail}">${person.mail}</a>
          </datatables:column>
          <datatables:column title="Mail" property="mail" display="CSV,XLS,PDF" />
-         <datatables:export type="PDF" includeHeader="true" fileName="my-export-name" cssClass="btn" label="PDF" />
       </datatables:table>
       
    </div>
@@ -46,7 +45,6 @@
             <a href="mailto:${person.mail}">${person.mail}</a>
          </datatables:column>
          <datatables:column title="Mail" property="mail" display="CSV,XLS,PDF" />
-         <datatables:export type="PDF" includeHeader="true" fileName="my-export-name" cssClass="btn" label="PDF" />
       </datatables:table>
       
    </div>
@@ -69,7 +67,6 @@
             <a href="mailto:${person.mail}">${person.mail}</a>
          </datatables:column>
          <datatables:column title="Mail" property="mail" display="CSV,XLS,PDF,XLSX" />
-         <datatables:export type="XLSX" includeHeader="true" fileName="my-export-name" cssClass="btn" label="XLSX" />
       </datatables:table>
       
    </div>

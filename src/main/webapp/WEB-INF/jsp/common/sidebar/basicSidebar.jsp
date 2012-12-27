@@ -10,6 +10,7 @@
       <li><a href="${basic}/sorting">Table sorting</a></li>
       <li><a href="${basic}/filtering">Table filtering</a></li>
       <li><a href="${basic}/paging">Table paging</a></li>
+      <li><a href="${basic}/changingpagination">Chaging pagination style</a></li>
       <li><a href="${basic}/lengthchange">Table length changing</a></li>
       <li><a href="${basic}/autowidth">Table width</a></li>
       <li><a href="${basic}/implicitObject">Using implicit object</a></li>

@@ -5,7 +5,6 @@
 
 <div id="sidebar bs-docs-sidebar" >
    <ul class="nav nav-tabs nav-stacked bs-docs-sidenav affix">
-      <li><a href="${themes}/pagination">Changing pagination</a></li>
       <li><a href="${themes}/bootstrap2">Bootstrap 2 theme</a></li>
    </ul>
 </div>
