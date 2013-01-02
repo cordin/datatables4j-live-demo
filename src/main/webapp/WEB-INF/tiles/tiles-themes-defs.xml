@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
-   
-   <!-- Theme layout -->
-   <definition name="themeLayout" extends="mainLayout">
-      <put-attribute name="sidebar" value="/WEB-INF/jsp/common/sidebar/themeSidebar.jsp" cascade="true" />
-   </definition>
-   
-   <definition name="emptyLayout" extends="mainLayout">
-      <put-attribute name="sidebar" value="/WEB-INF/jsp/common/sidebar/themeSidebar.jsp" cascade="true" />
-      <put-attribute name="assets" value="" cascade="true" />
-   </definition>
-   
-   <definition name="themes.bootstrap2*" extends="emptyLayout">
-      <put-attribute name="tabThemes" value="active" />
-      <put-attribute name="title" value="Themes - DataTables4j" />
-      <put-attribute name="content" value="/WEB-INF/jsp/themes/bootstrap2.jsp" />
-   </definition>
 
-   <definition name="themes.*" extends="themeLayout">
-      <put-attribute name="tabThemes" value="active" />
-      <put-attribute name="title" value="Themes - DataTables4j" />
-      <put-attribute name="content" value="/WEB-INF/jsp/themes/{1}.jsp" />
-   </definition>
-   
+    <!-- Theme layout -->
+    <definition name="themeLayout" extends="mainLayout">
+        <put-attribute name="sidebar" value="/WEB-INF/jsp/common/sidebar/themeSidebar.jsp" cascade="true"/>
+    </definition>
+
+    <definition name="emptyLayout" extends="mainLayout">
+        <put-attribute name="sidebar" value="/WEB-INF/jsp/common/sidebar/themeSidebar.jsp" cascade="true"/>
+        <put-attribute name="assets" value="" cascade="true"/>
+    </definition>
+
+    <definition name="themes.bootstrap2*" extends="emptyLayout">
+        <put-attribute name="tabThemes" value="active"/>
+        <put-attribute name="title" value="Themes - DataTables4j"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/themes/bootstrap2.jsp"/>
+    </definition>
+
+    <definition name="themes.jQueryUItable*" template="/WEB-INF/jsp/themes/jQueryUItable.jsp"/>
+
+    <definition name="themes.*" extends="themeLayout">
+        <put-attribute name="tabThemes" value="active"/>
+        <put-attribute name="title" value="Themes - DataTables4j"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/themes/{1}.jsp"/>
+    </definition>
+
 
 </tiles-definitions>
