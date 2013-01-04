@@ -7,7 +7,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
-<datatables:table id="myTableId" cssClass="display" data="${persons}" theme="jQueryUI" cdn="true">
+<datatables:table id="myTableId" data="${persons}" theme="jQueryUI" cdn="true">
     <datatables:column title="Id" property="id"/>
     <datatables:column title="FirstName" property="firstName"/>
     <datatables:column title="LastName" property="lastName"/>
