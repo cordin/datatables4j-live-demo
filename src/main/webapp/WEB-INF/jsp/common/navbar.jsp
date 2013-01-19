@@ -22,9 +22,9 @@
          <div class="nav-collapse collapse">
             <ul class="nav">
                <li><a href="${basic}/home"><i class="icon-leaf"></i> Basic examples</a></li>
-               <li><a href="${advanced}/home"><i class="icon-fire"></i> Advanced examples</a></li>
-               <li><a href="${features}/home"><i class="icon-list"></i> Features</a></li>
-               <li><a href="${themes}/home"><i class="icon-briefcase"></i> Themes</a></li>
+               <li><a href="${advanced}/home"><i class="icon-certificate"></i> Advanced examples</a></li>
+               <li><a href="${features}/home"><i class="icon-th-large"></i> Features</a></li>
+               <li><a href="${themes}/home"><i class="icon-magic"></i> Themes</a></li>
                <li><a href="${plugins}/home"><i class="icon-plus"></i> Plugins</a></li>
             </ul>
             <ul class="nav pull-right">

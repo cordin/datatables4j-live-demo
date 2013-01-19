@@ -21,37 +21,37 @@
       <dependency>
          <groupId>com.github.datatables4j</groupId>
          <artifactId>datatables4j-core-jsp</artifactId>
-         <version>0.7.1-SNAPSHOT</version>
+         <version>0.8.1-SNAPSHOT</version>
       </dependency>
 
       <dependency>
          <groupId>com.github.datatables4j</groupId>
          <artifactId>datatables4j-compression-yui</artifactId>
-         <version>0.3.2-SNAPSHOT</version>
+         <version>0.3.3-SNAPSHOT</version>
       </dependency>
 
       <dependency>
          <groupId>com.github.datatables4j</groupId>
          <artifactId>datatables4j-ajax-jersey</artifactId>
-         <version>0.3.2-SNAPSHOT</version>
+         <version>0.3.3-SNAPSHOT</version>
       </dependency>
 
       <dependency>
          <groupId>com.github.datatables4j</groupId>
          <artifactId>datatables4j-export-poi</artifactId>
-         <version>0.1.0-SNAPSHOT</version>
+         <version>0.1.1-SNAPSHOT</version>
       </dependency>
       
       <dependency>
          <groupId>com.github.datatables4j</groupId>
          <artifactId>datatables4j-export-poi-ooxml</artifactId>
-         <version>0.1.0-SNAPSHOT</version>
+         <version>0.1.1-SNAPSHOT</version>
       </dependency>
       
       <dependency>
          <groupId>com.github.datatables4j</groupId>
          <artifactId>datatables4j-export-itext</artifactId>
-         <version>0.1.0-SNAPSHOT</version>
+         <version>0.1.1-SNAPSHOT</version>
       </dependency>
       
       <!-- JSTL -->

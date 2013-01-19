@@ -4,7 +4,7 @@
    
    <!-- Basic layout -->
    <definition name="basicLayout" extends="mainLayout">
-      <put-attribute name="sidebar" value="/WEB-INF/jsp/common/sidebar/basicSidebar.jsp" cascade="true" />
+      <put-attribute name="sidebar" value="/WEB-INF/jsp/common/sidebarBasic.jsp" cascade="true" />
    </definition>
    
    <definition name="basic.*" extends="basicLayout">
@@ -12,5 +12,5 @@
       <put-attribute name="title" value="Basics - DataTables4j" />
       <put-attribute name="content" value="/WEB-INF/jsp/basic/{1}.jsp" />
    </definition>
-
+   
 </tiles-definitions>

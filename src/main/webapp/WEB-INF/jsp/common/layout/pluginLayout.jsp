@@ -5,7 +5,7 @@
 
 <c:url value="/plugins" var="plugins" />
 
-<div class="row">
+<div class="row-fluid">
    <div class="span2">
       <div class="well sidebar-nav">
          <ul class="nav nav-list">

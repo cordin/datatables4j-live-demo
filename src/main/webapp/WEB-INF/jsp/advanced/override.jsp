@@ -1,40 +1,60 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="../common/taglib.jsp" %>
+<%@ include file="../common/taglib.jsp"%>
 
-<div class="row">
-   <div class="span9">
-      <h3>Override defaults configuration</h3>
+<div class="row-fluid">
+   <div class="span12">
+      <h3>Override default configuration</h3>
       <p>
-         By default, DataTables4j internally uses a properties file containing all needed configuration. But there are two ways to override it.
+         By default, <strong>DataTables4j</strong> internally uses a properties file containing all needed
+         configuration. But there are two ways to override it.
       </p>
       <p>
-         First, you can add a file called <strong>datatables4j.properties</strong> in your classpath, allowing you to redefine every property you
-         need. Your custom global configuration will then be merged with the default one. 
+      <ul>
+         <li>First, you can add a file called <strong>datatables4j.properties</strong> in your classpath, allowing
+            you to redefine every property you need. Your custom global configuration will then be merged with the
+            default one.
+         </li>
+         <li>Or you can locally override properties using the <code>prop</code> tag. Just define the property's
+            name and value.
+         </li>
+      </ul>
       </p>
       <p>
-         Other way, you can locally override properties using the <code>prop</code> tag. Just define the property's name and value.
+         For instance, the compression feature is disabled by default. Thanks to the
+         <code>prop</code>
+         tag, you can enable it locally, just for the current table. Take a look at the generated Javascript file in the
+         example shown below !
       </p>
-      <p>
-         For instance, compression is by default disabled. Thanks to the <code>prop</code> tag, you can enable it locally, just for a given JSP.
-      </p>
-      <hr />
+      <br />
    </div>
 </div>
 
-<div class="row">
-   <div class="span9">
-
+<tab:tab>
+   <tab:demo>
       <datatables:table id="myTableId" data="${persons}">
          <datatables:column title="Id" property="id" />
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />
          <datatables:column title="Street" property="address.street1" />
          <datatables:column title="Mail" property="mail" />
-         <datatables:prop name="compressor.enable" value="true"/>
+         <datatables:prop name="compressor.enable" value="true" />
       </datatables:table>
-      
-   </div>
-</div>
-
-<%-- Documentation --%>
-<doc:doc source="advanced/override.jsp" doc="advanced.override.html" />
+   </tab:demo>
+   <tab:taglib>
+      <tab:code>
+         <datatables:table id="myTableId" data="${persons}">
+            <datatables:column title="Id" property="id" />
+            <datatables:column title="FirstName" property="firstName" />
+            <datatables:column title="LastName" property="lastName" />
+            <datatables:column title="Street" property="address.street1" />
+            <datatables:column title="Mail" property="mail" />
+            <datatables:prop name="compressor.enable" value="true" />
+         </datatables:table>
+      </tab:code>
+   </tab:taglib>
+   <tab:thymeleaf>
+      <p class="alert alert-error">
+         <strong>:-(</strong><br /> Not supported yet !
+      </p>
+   </tab:thymeleaf>
+</tab:tab>

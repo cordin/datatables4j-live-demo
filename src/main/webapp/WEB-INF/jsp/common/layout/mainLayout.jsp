@@ -11,12 +11,10 @@
 <body>
    <tiles:insertAttribute name="navbar" />
 
-   <div class="container">
-      <div class="row">
-         <div class="span3">
-            <tiles:insertAttribute name="sidebar" />
-         </div>
-         <div class="span9" style="min-height: 500px;">
+   <div class="container-fluid">
+      <div class="row-fluid">
+         <tiles:insertAttribute name="sidebar" />
+         <div class="span10" style="min-height: 550px;">
             <tiles:insertAttribute name="content" />
          </div>
       </div>
@@ -26,5 +24,11 @@
          <tiles:insertAttribute name="footer" />
       </footer>
    </div>
+
+   <script>
+$(document).ready(function(){
+   prettyPrint();
+});
+</script>
 </body>
 </html>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration> <!-- This will give you some valuable info about logback config upon runtime. 
-      Remove this for production. -->
+<configuration>
 
    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
       <encoder>
@@ -14,7 +13,5 @@
    </root>
 
    <logger name="com.github.datatables4j" level="DEBUG" />
-   <logger name="com.github.datatables4j.plugins" level="DEBUG" />
-   <logger name="org.apache.tiles" level="DEBUG" />
 
 </configuration>

@@ -9,3 +9,5 @@
 #Maven
 target/
 /src/main/java/rebel.xml
+/src/main/resources/rebel.xml
+/src/main/resources/rebel.xml

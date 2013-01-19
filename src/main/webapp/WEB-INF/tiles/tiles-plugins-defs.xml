@@ -4,7 +4,7 @@
    
    <!-- Basic layout -->
    <definition name="pluginLayout" extends="mainLayout">
-      <put-attribute name="sidebar" value="/WEB-INF/jsp/common/sidebar/pluginSidebar.jsp" cascade="true" />
+      <put-attribute name="sidebar" value="/WEB-INF/jsp/common/sidebarPlugin.jsp" cascade="true" />
    </definition>
    
    <definition name="plugins.*" extends="pluginLayout">

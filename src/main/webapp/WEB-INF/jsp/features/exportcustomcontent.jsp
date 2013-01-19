@@ -1,112 +1,198 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="../common/taglib.jsp" %>
+<%@ include file="../common/taglib.jsp"%>
 
-<div class="row">
-   <div class="span9">
+<div class="row-fluid">
+   <div class="span12">
       <h3>Customizing export content</h3>
-      <hr />
+      <br />
    </div>
 </div>
 
-<div class="row">
-   <div class="span9">
-      <h4>Example 1 : no header (all formats)</h4>
-      <p>
-         In this example, two ways of content customization have been added :
-         <ul>
-            <li><tt>includeHeader</tt> has been set to false, see it in action by clicking the export button</li>
-         <li>In order to avoid HTML code to be displayed in the CSV, two <tt>column</tt> tags have been set for the Mail column. One with the <tt>display="HTML"</tt>,
-            the other with <tt>display="CSV"</tt></li>
-      </ul>
-      </p>
-   </div>
-   <div class="span9"> 
-
-      <datatables:table id="myFirstTableId" data="${persons}" row="person" export="csv">
-         <datatables:column title="Id" property="id" />
-         <datatables:column title="FirstName" property="firstName" />
-         <datatables:column title="LastName" property="lastName" />
-         <datatables:column title="Street" property="address.street1" />
-         <datatables:column title="Mail">
-            <a href="mailto:${person.mail}">${person.mail}</a>
-         </datatables:column>
-         <datatables:export type="CSV" includeHeader="false" fileName="my-export-name" cssClass="btn" label="CSV without header row" />
-      </datatables:table>
-      
-   </div>
-</div>
-
-<br />
-
-<div class="row">
-   <div class="span9">
-      <h4>Example 2 : column auto-sizing (only XLS/XLSX)</h4>
-   </div>
-   <div class="span9"> 
-
-      <datatables:table id="mySecondTableId" data="${persons}" row="person" export="xls">
-         <datatables:column title="Id" property="id" />
-         <datatables:column title="FirstName" property="firstName" />
-         <datatables:column title="LastName" property="lastName" />
-         <datatables:column title="Street" property="address.street1" />
-         <datatables:column title="Mail">
-            <a href="mailto:${person.mail}">${person.mail}</a>
-         </datatables:column>
-         <datatables:export type="XLS" autoSize="true" fileName="my-export-name" cssClass="btn" label="XLS" />
-      </datatables:table>
-      
-   </div>
-</div>
-
-<br />
-
-<div class="row">
-   <div class="span9">
-      <h4>Example 3 : hide one or more columns in the export content</h4>
-      <p>
-         In the following example, the "Street" column is not exported.
-      </p>
-   </div>
-   <div class="span9"> 
-
-      <datatables:table id="myThirdTableId" data="${persons}" row="person" export="xls">
-         <datatables:column title="Id" property="id" />
-         <datatables:column title="FirstName" property="firstName" />
-         <datatables:column title="LastName" property="lastName" />
-         <datatables:column title="Street" property="address.street1" display="HTML" />
-         <datatables:column title="Mail" display="HTML">
-            <a href="mailto:${person.mail}">${person.mail}</a>
-         </datatables:column>
-         <datatables:column title="Mail" property="mail" display="CSV,XLS" />
-         <datatables:export type="XLS" includeHeader="true" fileName="my-export-name" cssClass="btn" label="XLS" />
-      </datatables:table>
-      
-   </div>
-</div>
-
-<br />
-
-<div class="row">
-   <div class="span9">
-      <h4>Example 4 : change any column's content for the export</h4>
-      <p>
-         In the following example, we don't want HTML code to be displayed in the exported "Mail" column.
-      </p>
-   </div>
-   <div class="span9"> 
-
-      <datatables:table id="myFourthTableId" data="${persons}" row="person" export="pdf">
-         <datatables:column title="Id" property="id" />
-         <datatables:column title="FirstName" property="firstName" />
-         <datatables:column title="LastName" property="lastName" />
-         <datatables:column title="Street" property="address.street1" />
-         <datatables:column title="Mail" display="HTML">
-            <a href="mailto:${person.mail}">${person.mail}</a>
-         </datatables:column>
-         <datatables:column title="Mail" property="mail" display="CSV,XLS,PDF" />
-         <datatables:export type="XLS" includeHeader="true" fileName="my-export-name" cssClass="btn" />
-         <datatables:export type="PDF" includeHeader="true" fileName="my-export-name" cssClass="btn" />
-      </datatables:table>
-      
+<div class="tabbable">
+   <ul id="myTabs" class="nav nav-pills custom-pills">
+      <li class="active"><a href="#example1" data-toggle="tab"><i class="icon-chevron-down"></i> No header (all
+            formats)</a></li>
+      <li><a href="#example2" data-toggle="tab"><i class="icon-chevron-down"></i> Column auto-sizing (only
+            XLS/XLSX)</a></li>
+      <li><a href="#example3" data-toggle="tab"><i class="icon-chevron-down"></i> Hide columns (all formats)</a></li>
+      <li><a href="#example4" data-toggle="tab"><i class="icon-chevron-down"></i> Adapt column's content (all
+            formats)</a></li>
+   </ul>
+   <hr />
+   <div class="tab-content">
+      <div class="tab-pane active" id="example1">
+         <p>
+            In this example, the table header doesn't appear in export thanks to the
+            <code>includeHeader</code>
+            export attribute, set to
+            <code>false</code>
+            .
+         </p>
+         <tab:tab>
+            <tab:demo>
+               <datatables:table id="myFirstTableId" data="${persons}" row="person" export="csv">
+                  <datatables:column title="Id" property="id" />
+                  <datatables:column title="FirstName" property="firstName" />
+                  <datatables:column title="LastName" property="lastName" />
+                  <datatables:column title="Street" property="address.street1" />
+                  <datatables:column title="Mail">
+                     <a href="mailto:${person.mail}">${person.mail}</a>
+                  </datatables:column>
+                  <datatables:export type="csv" includeHeader="false" fileName="my-export-name" cssClass="btn"
+                     label="CSV without header row" />
+               </datatables:table>
+            </tab:demo>
+            <tab:taglib>
+               <tab:code>
+                  <datatables:table id="myFirstTableId" data="${persons}" row="person" export="csv">
+                     <datatables:column title="Id" property="id" />
+                     <datatables:column title="FirstName" property="firstName" />
+                     <datatables:column title="LastName" property="lastName" />
+                     <datatables:column title="Street" property="address.street1" />
+                     <datatables:column title="Mail">
+                        <a href="mailto:${person.mail}">${person.mail}</a>
+                     </datatables:column>
+                     <datatables:export type="csv" includeHeader="false" fileName="my-export-name" cssClass="btn"
+                        label="CSV without header row" />
+                  </datatables:table>
+               </tab:code>
+            </tab:taglib>
+            <tab:thymeleaf>
+               <p class="alert alert-error">
+                  <strong>:-(</strong><br /> Not supported yet !
+               </p>
+            </tab:thymeleaf>
+         </tab:tab>
+      </div>
+      <div class="tab-pane" id="example2">
+         <p>
+            For XLS and XLSX export formats, you can tell DataTables4j to auto-size columns using the
+            <code>autoSize</code>
+            export attribute.
+         </p>
+         <tab:tab>
+            <tab:demo>
+               <datatables:table id="mySecondTableId" data="${persons}" row="person" export="xls">
+                  <datatables:column title="Id" property="id" />
+                  <datatables:column title="FirstName" property="firstName" />
+                  <datatables:column title="LastName" property="lastName" />
+                  <datatables:column title="Street" property="address.street1" />
+                  <datatables:column title="Mail">
+                     <a href="mailto:${person.mail}">${person.mail}</a>
+                  </datatables:column>
+                  <datatables:export type="XLS" autoSize="true" fileName="my-export-name" cssClass="btn" label="XLS" />
+               </datatables:table>
+            </tab:demo>
+            <tab:taglib>
+               <tab:code>
+                  <datatables:table id="mySecondTableId" data="${persons}" row="person" export="xls">
+                     <datatables:column title="Id" property="id" />
+                     <datatables:column title="FirstName" property="firstName" />
+                     <datatables:column title="LastName" property="lastName" />
+                     <datatables:column title="Street" property="address.street1" />
+                     <datatables:column title="Mail">
+                        <a href="mailto:${person.mail}">${person.mail}</a>
+                     </datatables:column>
+                     <datatables:export type="XLS" autoSize="true" fileName="my-export-name" cssClass="btn" label="XLS" />
+                  </datatables:table>
+               </tab:code>
+            </tab:taglib>
+            <tab:thymeleaf>
+               <p class="alert alert-error">
+                  <strong>:-(</strong><br /> Not supported yet !
+               </p>
+            </tab:thymeleaf>
+         </tab:tab>
+      </div>
+      <div class="tab-pane" id="example3">
+         <p>
+            The
+            <code>display</code>
+            column attribute allows you to configure different exported content for a column. By default, all columns
+            are exported in all formats but you can specify that a column will only appear in a few formats.
+         </p>
+         <p>In the following example, the "Street" column only appears in HTML, not in exports.</p>
+         <tab:tab>
+            <tab:demo>
+               <datatables:table id="myThirdTableId" data="${persons}" row="person" export="xls">
+                  <datatables:column title="Id" property="id" />
+                  <datatables:column title="FirstName" property="firstName" />
+                  <datatables:column title="LastName" property="lastName" />
+                  <datatables:column title="Street" property="address.street1" display="html" />
+                  <datatables:column title="Mail" display="html">
+                     <a href="mailto:${person.mail}">${person.mail}</a>
+                  </datatables:column>
+                  <datatables:column title="Mail" property="mail" display="csv,xls" />
+                  <datatables:export type="xls" includeHeader="true" fileName="my-export-name" cssClass="btn" label="xls" />
+               </datatables:table>
+            </tab:demo>
+            <tab:taglib>
+               <tab:code>
+                  <datatables:table id="myThirdTableId" data="${persons}" row="person" export="xls">
+                     <datatables:column title="Id" property="id" />
+                     <datatables:column title="FirstName" property="firstName" />
+                     <datatables:column title="LastName" property="lastName" />
+                     <datatables:column title="Street" property="address.street1" display="html" />
+                     <datatables:column title="Mail" display="html">
+                        <a href="mailto:${person.mail}">${person.mail}</a>
+                     </datatables:column>
+                     <datatables:column title="Mail" property="mail" display="csv,xls" />
+                     <datatables:export type="xls" includeHeader="true" fileName="my-export-name" cssClass="btn"
+                        label="xls" />
+                  </datatables:table>
+               </tab:code>
+            </tab:taglib>
+            <tab:thymeleaf>
+               <p class="alert alert-error">
+                  <strong>:-(</strong><br /> Not supported yet !
+               </p>
+            </tab:thymeleaf>
+         </tab:tab>
+      </div>
+      <div class="tab-pane" id="example4">
+         <p>
+            Thanks to the
+            <code>display</code>
+            column attribute, you can choose what content to appear in different formats.
+         </p>
+         <p>In the following example, we don't want HTML code to be displayed in the exported "Mail" column.</p>
+         <tab:tab>
+            <tab:demo>
+               <datatables:table id="myFourthTableId" data="${persons}" row="person" export="pdf">
+                  <datatables:column title="Id" property="id" />
+                  <datatables:column title="FirstName" property="firstName" />
+                  <datatables:column title="LastName" property="lastName" />
+                  <datatables:column title="Street" property="address.street1" />
+                  <datatables:column title="Mail" display="html">
+                     <a href="mailto:${person.mail}">${person.mail}</a>
+                  </datatables:column>
+                  <datatables:column title="Mail" property="mail" display="csv,xls,pdf" />
+                  <datatables:export type="xls" includeHeader="true" fileName="my-export-name" cssClass="btn" />
+                  <datatables:export type="pdf" includeHeader="true" fileName="my-export-name" cssClass="btn" />
+               </datatables:table>
+            </tab:demo>
+            <tab:taglib>
+               <tab:code>
+                  <datatables:table id="myFourthTableId" data="${persons}" row="person" export="pdf">
+                     <datatables:column title="Id" property="id" />
+                     <datatables:column title="FirstName" property="firstName" />
+                     <datatables:column title="LastName" property="lastName" />
+                     <datatables:column title="Street" property="address.street1" />
+                     <datatables:column title="Mail" display="html">
+                        <a href="mailto:${person.mail}">${person.mail}</a>
+                     </datatables:column>
+                     <datatables:column title="Mail" property="mail" display="csv,xls,pdf" />
+                     <datatables:export type="xls" includeHeader="true" fileName="my-export-name" cssClass="btn" />
+                     <datatables:export type="pdf" includeHeader="true" fileName="my-export-name" cssClass="btn" />
+                  </datatables:table>
+               </tab:code>
+            </tab:taglib>
+            <tab:thymeleaf>
+               <p class="alert alert-error">
+                  <strong>:-(</strong><br /> Not supported yet !
+               </p>
+            </tab:thymeleaf>
+         </tab:tab>
+      </div>
    </div>
 </div>

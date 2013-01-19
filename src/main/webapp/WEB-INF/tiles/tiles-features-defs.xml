@@ -4,7 +4,7 @@
    
    <!-- Basic layout -->
    <definition name="featureLayout" extends="mainLayout">
-      <put-attribute name="sidebar" value="/WEB-INF/jsp/common/sidebar/featureSidebar.jsp" cascade="true" />
+      <put-attribute name="sidebar" value="/WEB-INF/jsp/common/sidebarFeature.jsp" cascade="true" />
    </definition>
    
    <definition name="features.*" extends="featureLayout">

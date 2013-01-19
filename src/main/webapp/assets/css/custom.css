@@ -86,7 +86,7 @@ footer ul.right li {
 -------------------------------------------------- */
 
 .bs-docs-sidenav {
-  width: 250px;
+  width: 228px;
   margin: 30px 0 0;
   padding: 0;
   background-color: #fff;
@@ -143,10 +143,29 @@ footer ul.right li {
   opacity: 1;
 }
 .bs-docs-sidenav.affix {
-  top: 40px;
+  top: 20px;
 }
 .bs-docs-sidenav.affix-bottom {
   position: absolute;
   top: auto;
   bottom: 270px;
+}
+
+/* Custom active class 
+li.active {
+	font-weight: bold;
+}
+*
+
+/* Custom pills */
+.custom-pills .icon-chevron-down {
+  opacity: .25;
+}
+.custom-pills a:hover .icon-chevron-down {
+  opacity: .5;
+}
+.custom-pills .active .icon-chevron-down,
+.custom-pills .active a:hover .icon-chevron-down {
+  background-image: url(../img/glyphicons-halflings-white.png);
+  opacity: 1;
 }
