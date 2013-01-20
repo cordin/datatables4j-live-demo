@@ -5,7 +5,7 @@
    <li><a href="http://datatables4j.github.com/docs" class="btn btn-small btn-info">Documentation</a></li>
 </ul>
 <ul class="pull-right">
-   <li><a href="https://twitter.com/share" class="twitter-share-button" data-text="Check the DataTables4j taglib demo !" data-via="DataTables4j">Tweet</a>
+   <li><a href="https://twitter.com/share" class="twitter-share-button" data-text="Find out the DataTables4j demo !" data-via="DataTables4j">Tweet</a>
       <script>
 							!function(d, s, id) {
 								var js, fjs = d.getElementsByTagName(s)[0];
