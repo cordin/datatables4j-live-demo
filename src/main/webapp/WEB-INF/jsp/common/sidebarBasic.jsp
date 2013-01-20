@@ -11,7 +11,7 @@
       <li><a href="${basic}/sorting"><i class="icon-chevron-right"></i> Table sorting</a></li>
       <li><a href="${basic}/filtering"><i class="icon-chevron-right"></i> Table filtering</a></li>
       <li><a href="${basic}/paging"><i class="icon-chevron-right"></i> Table paging</a></li>
-      <li><a href="${basic}/changingpagination"><i class="icon-chevron-right"></i> Changing pagination style</a></li>
+      <%--<li><a href="${basic}/changingpagination"><i class="icon-chevron-right"></i> Changing pagination style</a></li> --%>
       <li><a href="${basic}/lengthchange"><i class="icon-chevron-right"></i> Table length changing</a></li>
       <%--<li><a href="${basic}/autowidth"><i class="icon-chevron-right"></i> Table width</a></li> --%>
       <li><a href="${basic}/cdn"><i class="icon-chevron-right"></i> Using CDN</a></li>

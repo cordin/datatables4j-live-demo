@@ -13,7 +13,7 @@
       <h4>Example 1 : default pagination type : two_button full_numbers</h4>
    </div>
 </div>
-<tab:tab source="basic/changingpagination.jsp" start="31" end="37">
+<tab:tab>
    <tab:demo>
       <datatables:table id="basic1" data="${persons}">
          <datatables:column title="Id" property="id" />
@@ -30,7 +30,7 @@
       <h4>Example 2 : default pagination type : two_button full_numbers</h4>
    </div>
 </div>
-<tab:tab source="basic/changingpagination.jsp" start="31" end="37">
+<tab:tab>
    <tab:demo>
       <datatables:table id="basic2" data="${persons}" paginationType="full_numbers">
          <datatables:column title="Id" property="id" />
@@ -134,6 +134,3 @@
 
    </div>
 </div>
-
-<%-- Documentation --%>
-<doc:doc source="basic/sorting.jsp" doc="basic.sorting.html" />

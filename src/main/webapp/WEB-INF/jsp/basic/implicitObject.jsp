@@ -40,16 +40,15 @@
    </tab:demo>
    <tab:taglib>
       <tab:code>
-         <datatables:table id="myTableId" data="${persons}" row="person">
-            <datatables:column title="Id" property="id" />
-            <datatables:column title="FirstName" property="firstName" />
-            <datatables:column title="LastName" property="lastName" />
-            <datatables:column title="Street" property="address.street1" />
-            <datatables:column title="Mail">
-               <a href="mailto:${person.mail}">${person.mail}</a>
-            </datatables:column>
-         </datatables:table>
-      </tab:code>
+<datatables:table id="myTableId" data="${persons}" row="person">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" />
+   <datatables:column title="Mail">
+      <a href="mailto:${person.mail}">${person.mail}</a>
+   </datatables:column>
+</datatables:table></tab:code>
       <tab:thymeleaf>
          <p>
             Actually, there's nothing specific to <strong>DataTables4j</strong> here. Thymeleaf natively allows you to
@@ -57,27 +56,26 @@
             more details).
          </p>
          <tab:code>
-            <table id="myTable" dt:table="true">
-               <thead>
-                  <tr>
-                     <th>Id</th>
-                     <th>Firstname</th>
-                     <th>Lastname</th>
-                     <th>Street</th>
-                     <th>Mail</th>
-                  </tr>
-               </thead>
-               <tbody th:remove="all-but-first">
-                  <tr th:each="person : ${persons}">
-                     <td th:text="${person.id}">1</td>
-                     <td th:text="${person.firstName}">John</td>
-                     <td th:text="${person.lastName}">Doe</td>
-                     <td th:text="${person.address.street1}">Nobody knows !</td>
-                     <td><a th:href="${'mailto:' + person.mail}" th:text="${person.mail}">john@doe.com</a></td>
-                  </tr>
-               </tbody>
-            </table>
-         </tab:code>
+<table id="myTable" dt:table="true">
+   <thead>
+      <tr>
+         <th>Id</th>
+         <th>Firstname</th>
+         <th>Lastname</th>
+         <th>Street</th>
+         <th>Mail</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr th:each="person : ${persons}">
+         <td th:text="${person.id}">1</td>
+         <td th:text="${person.firstName}">John</td>
+         <td th:text="${person.lastName}">Doe</td>
+         <td th:text="${person.address.street1}">Nobody knows !</td>
+         <td><a th:href="${'mailto:' + person.mail}" th:text="${person.mail}">john@doe.com</a></td>
+      </tr>
+   </tbody>
+</table></tab:code>
       </tab:thymeleaf>
    </tab:taglib>
 

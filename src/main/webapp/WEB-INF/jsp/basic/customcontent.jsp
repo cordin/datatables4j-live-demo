@@ -39,50 +39,47 @@
    </tab:demo>
    <tab:taglib>
       <tab:code>
-         <datatables:table id="myTableId" data="${persons}" row="person">
-            <datatables:column title="Id" property="id" />
-            <datatables:column title="FirstName" property="firstName" />
-            <datatables:column title="LastName" property="lastName" />
-            <datatables:column title="Street" property="address.street1" />
-            <datatables:column title="Mail" property="mail" />
-            <datatables:column title="Actions" sortable="false">
-               <a onclick="alert('Person ' + ${person.id} + ' deleted !');" class="btn btn-mini" title="Remove"><i
-                  class="icon-trash"></i></a>
-               <a onclick="alert('Person ' + ${person.id} + ' edited !');" class="btn btn-mini" title="Edit"><i
-                  class="icon-edit"></i></a>
-            </datatables:column>
-         </datatables:table>
-      </tab:code>
+<datatables:table id="myTableId" data="${persons}" row="person">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" />
+   <datatables:column title="Mail" property="mail" />
+   <datatables:column title="Actions" sortable="false">
+      <a onclick="alert('Person ' + ${person.id} + ' deleted !');" class="btn btn-mini" title="Remove"><i class="icon-trash"></i></a>
+      <a onclick="alert('Person ' + ${person.id} + ' edited !');" class="btn btn-mini" title="Edit"><i class="icon-edit"></i></a>
+   </datatables:column>
+</datatables:table></tab:code>
    </tab:taglib>
    <tab:thymeleaf>
       <p>Actually, you just need to use the Standard Thymeleaf Expression to set any content you want inside the
          columns.</p>
       <tab:code>
-         <table id="myTable" dt:table="true">
-            <thead>
-               <tr>
-                  <th>Id</th>
-                  <th>Firstname</th>
-                  <th>Lastname</th>
-                  <th>Street</th>
-                  <th>Mail</th>
-                  <th>Actions</th>
-               </tr>
-            </thead>
-            <tbody th:remove="all-but-first">
-               <tr th:each="person : ${persons}">
-                  <td th:text="${person.id}">1</td>
-                  <td th:text="${person.firstName}">John</td>
-                  <td th:text="${person.lastName}">Doe</td>
-                  <td th:text="${person.address.street1}">Nobody knows !</td>
-                  <td th:text="${person.mail}">john@doe.com</td>
-                  <td><a th:onclick="'alert(\'Person ' + ${person.id} + ' deleted !\');'" class="btn btn-mini"
-                     title="Remove"><i class="icon-trash"></i></a> <a
-                     th:onclick="'alert(\'Person ' + ${person.id} + ' edited !\');'" class="btn btn-mini" title="Edit"><i
-                        class="icon-edit"></i></a></td>
-               </tr>
-            </tbody>
-         </table>
+<table id="myTable" dt:table="true">
+   <thead>
+      <tr>
+         <th>Id</th>
+         <th>Firstname</th>
+         <th>Lastname</th>
+         <th>Street</th>
+         <th>Mail</th>
+         <th>Actions</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr th:each="person : ${persons}">
+         <td th:text="${person.id}">1</td>
+         <td th:text="${person.firstName}">John</td>
+         <td th:text="${person.lastName}">Doe</td>
+         <td th:text="${person.address.street1}">Nobody knows !</td>
+         <td th:text="${person.mail}">john@doe.com</td>
+         <td>
+            <a th:onclick="'alert(\'Person ' + ${person.id} + ' deleted !\');'" class="btn btn-mini" title="Remove"><i class="icon-trash"></i></a>
+            <a th:onclick="'alert(\'Person ' + ${person.id} + ' edited !\');'" class="btn btn-mini" title="Edit"><i class="icon-edit"></i></a>
+         </td>
+      </tr>
+   </tbody>
+</table>
       </tab:code>
    </tab:thymeleaf>
 </tab:tab>

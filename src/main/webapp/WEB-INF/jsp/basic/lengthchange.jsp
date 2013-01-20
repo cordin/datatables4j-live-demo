@@ -13,7 +13,7 @@
    </div>
 </div>
 
-<tab:tab source="basic/lengthchange.jsp" start="18" end="24">
+<tab:tab>
    <tab:demo>
       <datatables:table id="myTableId" data="${persons}" lengthChange="false">
          <datatables:column title="Id" property="id" />
@@ -23,4 +23,19 @@
          <datatables:column title="Mail" property="mail" />
       </datatables:table>
    </tab:demo>
+   <tab:taglib>
+      <tab:code>
+<datatables:table id="myTableId" data="${persons}" lengthChange="false">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" />
+   <datatables:column title="Mail" property="mail" />
+</datatables:table></tab:code>
+   </tab:taglib>
+   <tab:thymeleaf>
+      <p class="alert alert-error">
+         <strong>:-(</strong><br /> Not supported yet !
+      </p>
+   </tab:thymeleaf>
 </tab:tab>
