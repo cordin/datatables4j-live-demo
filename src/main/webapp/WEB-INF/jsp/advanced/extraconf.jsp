@@ -60,14 +60,13 @@
      }
  }</tab:code>
     <tab:code>
-    <datatables:table id="myTableId" data="${persons}">
-         <datatables:column title="Id" property="id" />
-         <datatables:column title="Firstname" property="firstName" />
-         <datatables:column title="LastName" property="lastName" />
-         <datatables:column title="Street" property="address.street1" sortable="false" />
-         <datatables:column title="Mail" property="mail" />
-         <datatables:extraConf src="/js/datatables.extraConf.js" />
-      </datatables:table>
-    </tab:code>
+<datatables:table id="myTableId" data="${persons}">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="Firstname" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" sortable="false" />
+   <datatables:column title="Mail" property="mail" />
+   <datatables:extraConf src="/js/datatables.extraConf.js" />
+</datatables:table></tab:code>
    </tab:taglib>
 </tab:tab>

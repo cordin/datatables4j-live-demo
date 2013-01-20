@@ -59,14 +59,13 @@
    </tab:demo>
    <tab:taglib>
       <tab:code>
-         <datatables:table id="myTableId" data="${persons}" labels="/js/datatables.labels.fr.txt">
-            <datatables:column title="Id" property="id" />
-            <datatables:column title="Firstname" property="firstName" />
-            <datatables:column title="LastName" property="lastName" />
-            <datatables:column title="Street" property="address.street1" sortable="false" />
-            <datatables:column title="Mail" property="mail" />
-         </datatables:table>
-      </tab:code>
+<datatables:table id="myTableId" data="${persons}" labels="/js/datatables.labels.fr.txt">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="Firstname" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" sortable="false" />
+   <datatables:column title="Mail" property="mail" />
+</datatables:table></tab:code>
    </tab:taglib>
    <tab:thymeleaf>
       <p class="alert alert-error">
