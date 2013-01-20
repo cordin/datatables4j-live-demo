@@ -42,14 +42,13 @@
                   table attribute.
                </p>
                <tab:code>
-                  <datatables:table id="myTableId" data="${persons}" sort="false">
-                     <datatables:column title="Id" property="id" />
-                     <datatables:column title="FirstName" property="firstName" />
-                     <datatables:column title="LastName" property="lastName" />
-                     <datatables:column title="Street" property="address.street1" />
-                     <datatables:column title="Mail" property="mail" />
-                  </datatables:table>
-               </tab:code>
+<datatables:table id="myTableId" data="${persons}" sort="false">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" />
+   <datatables:column title="Mail" property="mail" />
+</datatables:table></tab:code>
             </tab:taglib>
             <tab:thymeleaf>
                <p>
@@ -58,30 +57,28 @@
                   table attribute.
                </p>
                <tab:code>
-                  <table id="myTable" dt:table="true" dt:sort="false">
-                     <thead>
-                        <tr>
-                           <th>Id</th>
-                           <th>Firstname</th>
-                           <th>Lastname</th>
-                           <th>Street</th>
-                           <th>Mail</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr th:each="person : ${persons}">
-                           <td th:text="${person.id}">1</td>
-                           <td th:text="${person.firstName}">John</td>
-                           <td th:text="${person.lastName}">Doe</td>
-                           <td th:text="${person.address.street1}">Nobody knows !</td>
-                           <td th:text="${person.mail}">john@doe.com</td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </tab:code>
+<table id="myTable" dt:table="true" dt:sort="false">
+   <thead>
+      <tr>
+         <th>Id</th>
+         <th>Firstname</th>
+         <th>Lastname</th>
+         <th>Street</th>
+         <th>Mail</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr th:each="person : ${persons}">
+         <td th:text="${person.id}">1</td>
+         <td th:text="${person.firstName}">John</td>
+         <td th:text="${person.lastName}">Doe</td>
+         <td th:text="${person.address.street1}">Nobody knows !</td>
+         <td th:text="${person.mail}">john@doe.com</td>
+      </tr>
+   </tbody>
+</table></tab:code>
             </tab:thymeleaf>
          </tab:tab>
-
       </div>
       <div class="tab-pane" id="example2">
          <p>Moreover, you can enable/disable the sort in specific column.</p>
@@ -105,14 +102,13 @@
                   .
                </p>
                <tab:code>
-                  <datatables:table id="mySecondTableId" data="${persons}">
-                     <datatables:column title="Id" property="id" sortable="false" />
-                     <datatables:column title="FirstName" property="firstName" />
-                     <datatables:column title="LastName" property="lastName" />
-                     <datatables:column title="Street" property="address.street1" />
-                     <datatables:column title="Mail" property="mail" sortable="false" />
-                  </datatables:table>
-               </tab:code>
+<datatables:table id="mySecondTableId" data="${persons}">
+   <datatables:column title="Id" property="id" sortable="false" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" />
+   <datatables:column title="Mail" property="mail" sortable="false" />
+</datatables:table></tab:code>
             </tab:taglib>
             <tab:thymeleaf>
                <p>
@@ -123,32 +119,29 @@
                   .
                </p>
                <tab:code>
-                  <table id="mySecondTableId" dt:table="true">
-                     <thead>
-                        <tr>
-                           <th dt:sortable="false">Id</th>
-                           <th>Firstname</th>
-                           <th>Lastname</th>
-                           <th>Street</th>
-                           <th>Mail</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr th:each="person : ${persons}">
-                           <td th:text="${person.id}">1</td>
-                           <td th:text="${person.firstName}">John</td>
-                           <td th:text="${person.lastName}">Doe</td>
-                           <td th:text="${person.address.street1}">Nobody knows !</td>
-                           <td th:text="${person.mail}">john@doe.com</td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </tab:code>
+<table id="mySecondTableId" dt:table="true">
+   <thead>
+      <tr>
+         <th dt:sortable="false">Id</th>
+         <th>Firstname</th>
+         <th>Lastname</th>
+         <th>Street</th>
+         <th>Mail</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr th:each="person : ${persons}">
+         <td th:text="${person.id}">1</td>
+         <td th:text="${person.firstName}">John</td>
+         <td th:text="${person.lastName}">Doe</td>
+         <td th:text="${person.address.street1}">Nobody knows !</td>
+         <td th:text="${person.mail}">john@doe.com</td>
+      </tr>
+   </tbody>
+</table></tab:code>
             </tab:thymeleaf>
          </tab:tab>
-
       </div>
-
       <div class="tab-pane" id="example3">
          <p>
             You can also initialise the column sorting direction using the
@@ -174,14 +167,13 @@
             </tab:demo>
             <tab:taglib>
                <tab:code>
-                  <datatables:table id="myThirdTableId" data="${persons}">
-                     <datatables:column title="Id" property="id" sortable="false" />
-                     <datatables:column title="FirstName" property="firstName" sortInit="desc" />
-                     <datatables:column title="LastName" property="lastName" sortInit="desc" />
-                     <datatables:column title="Street" property="address.street1" />
-                     <datatables:column title="Mail" property="mail" sortable="false" />
-                  </datatables:table>
-               </tab:code>
+<datatables:table id="myThirdTableId" data="${persons}">
+   <datatables:column title="Id" property="id" sortable="false" />
+   <datatables:column title="FirstName" property="firstName" sortInit="desc" />
+   <datatables:column title="LastName" property="lastName" sortInit="desc" />
+   <datatables:column title="Street" property="address.street1" />
+   <datatables:column title="Mail" property="mail" sortable="false" />
+</datatables:table></tab:code>
             </tab:taglib>
             <tab:thymeleaf>
                <p class="alert alert-error">
@@ -189,11 +181,8 @@
                </p>
             </tab:thymeleaf>
          </tab:tab>
-
       </div>
-
       <div class="tab-pane" id="example4">
-
          <p>
             Finally, you can control the column sorting behaviour using the
             <code>sortDirection</code>
@@ -217,13 +206,13 @@
             </tab:demo>
             <tab:taglib>
                <tab:code>
-                  <datatables:table id="myFourthTableId" data="${persons}">
-                     <datatables:column title="Id" property="id" sortable="false" />
-                     <datatables:column title="FirstName" property="firstName" />
-                     <datatables:column title="LastName" property="lastName" />
-                     <datatables:column title="Street" property="address.street1" sortDirection="asc" />
-                     <datatables:column title="Mail" property="mail" sortDirection="desc" />
-                  </datatables:table>
+<datatables:table id="myFourthTableId" data="${persons}">
+   <datatables:column title="Id" property="id" sortable="false" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" sortDirection="asc" />
+   <datatables:column title="Mail" property="mail" sortDirection="desc" />
+</datatables:table>
                </tab:code>
             </tab:taglib>
             <tab:thymeleaf>

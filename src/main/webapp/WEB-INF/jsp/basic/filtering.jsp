@@ -30,6 +30,11 @@
                </datatables:table>
             </tab:demo>
             <tab:taglib>
+               <p>
+                  You can enable (or disable) the filtering feature using the
+                  <code>filter</code>
+                  table attribute.
+               </p>
                <tab:code>
                   <datatables:table id="myTableId" data="${persons}" filter="false">
                      <datatables:column title="Id" property="id" />
@@ -41,6 +46,11 @@
                </tab:code>
             </tab:taglib>
             <tab:thymeleaf>
+               <p>
+                  You can enable (or disable) the sort feature using the
+                  <code>dt:filter</code>
+                  table attribute.
+               </p>
                <tab:code>
                   <table id="myTableId" dt:table="true" dt:filter="false">
                      <thead>
@@ -78,6 +88,11 @@
                </datatables:table>
             </tab:demo>
             <tab:taglib>
+               <p>
+                  By default, specific column filtering is disable but you can enable it using the
+                  <code>filterable</code>
+                  column attribute.
+               </p>
                <tab:code>
                   <datatables:table id="mySecondTableId" data="${persons}">
                      <datatables:column title="Id" property="id" />
@@ -89,6 +104,11 @@
                </tab:code>
             </tab:taglib>
             <tab:thymeleaf>
+               <p>
+                  With Thymeleaf, you can use the
+                  <code>dt:filterable</code>
+                  th attribute.
+               </p>
                <tab:code>
                   <table id="mySecondTableId" dt:table="true">
                      <thead>
@@ -115,6 +135,8 @@
          </tab:tab>
       </div>
       <div class="tab-pane" id="example3">
+         <p>By default, if filtering is enabled on a specific column, an input field will be added in the
+            corresponding tfoot cell. But you can also use select boxes !</p>
          <tab:tab>
             <tab:demo>
                <datatables:table id="myThirdTableId" data="${persons}">
@@ -126,6 +148,13 @@
                </datatables:table>
             </tab:demo>
             <tab:taglib>
+               <p>
+                  Set the
+                  <code>filterType</code>
+                  column attribute to
+                  <code>select</code>
+                  to replace the input field by a select box !
+               </p>
                <tab:code>
                   <datatables:table id="myThirdTableId" data="${persons}">
                      <datatables:column title="Id" property="id" />
@@ -137,6 +166,13 @@
                </tab:code>
             </tab:taglib>
             <tab:thymeleaf>
+               <p>
+                  With Thympeleaf, set the
+                  <code>dt:filterType</code>
+                  th attribute to
+                  <code>select</code>
+                  .
+               </p>
                <tab:code>
                   <table id="myThirdTableId" dt:table="true">
                      <thead>

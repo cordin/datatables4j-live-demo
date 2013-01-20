@@ -29,14 +29,13 @@
          .
       </p>
       <tab:code>
-         <datatables:table id="myTableId" data="${persons}" info="false">
-            <datatables:column title="Id" property="id" />
-            <datatables:column title="FirstName" property="firstName" />
-            <datatables:column title="LastName" property="lastName" />
-            <datatables:column title="Street" property="address.street1" />
-            <datatables:column title="Mail" property="mail" />
-         </datatables:table>
-      </tab:code>
+<datatables:table id="myTableId" data="${persons}" info="false">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" />
+   <datatables:column title="Mail" property="mail" />
+</datatables:table></tab:code>
    </tab:taglib>
    <tab:thymeleaf>
       <p>
@@ -47,26 +46,25 @@
          .
       </p>
       <tab:code>
-         <table id="myTable" dt:table="true" dt:info="false">
-            <thead>
-               <tr>
-                  <th>Id</th>
-                  <th>Firstname</th>
-                  <th>Lastname</th>
-                  <th>Street</th>
-                  <th>Mail</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr th:each="person : ${persons}">
-                  <td th:text="${person.id}">1</td>
-                  <td th:text="${person.firstName}">John</td>
-                  <td th:text="${person.lastName}">Doe</td>
-                  <td th:text="${person.address.street1}">Nobody knows !</td>
-                  <td th:text="${person.mail}">john@doe.com</td>
-               </tr>
-            </tbody>
-         </table>
-      </tab:code>
+<table id="myTable" dt:table="true" dt:info="false">
+   <thead>
+      <tr>
+         <th>Id</th>
+         <th>Firstname</th>
+         <th>Lastname</th>
+         <th>Street</th>
+         <th>Mail</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr th:each="person : ${persons}">
+         <td th:text="${person.id}">1</td>
+         <td th:text="${person.firstName}">John</td>
+         <td th:text="${person.lastName}">Doe</td>
+         <td th:text="${person.address.street1}">Nobody knows !</td>
+         <td th:text="${person.mail}">john@doe.com</td>
+      </tr>
+   </tbody>
+</table></tab:code>
    </tab:thymeleaf>
 </tab:tab>
