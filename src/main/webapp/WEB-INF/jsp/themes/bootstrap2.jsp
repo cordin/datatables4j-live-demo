@@ -8,8 +8,8 @@
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
-<script src="<c:url value="/js/github-files.js" />"></script>
 <script src="<c:url value="/js/prettify.js" />"></script>
+<script src="<c:url value="/js/ga.js" />"></script>
 
 <div class="row-fluid">
    <div class="span12">
