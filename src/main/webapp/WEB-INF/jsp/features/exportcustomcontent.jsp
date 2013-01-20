@@ -44,18 +44,16 @@
             </tab:demo>
             <tab:taglib>
                <tab:code>
-                  <datatables:table id="myFirstTableId" data="${persons}" row="person" export="csv">
-                     <datatables:column title="Id" property="id" />
-                     <datatables:column title="FirstName" property="firstName" />
-                     <datatables:column title="LastName" property="lastName" />
-                     <datatables:column title="Street" property="address.street1" />
-                     <datatables:column title="Mail">
-                        <a href="mailto:${person.mail}">${person.mail}</a>
-                     </datatables:column>
-                     <datatables:export type="csv" includeHeader="false" fileName="my-export-name" cssClass="btn"
-                        label="CSV without header row" />
-                  </datatables:table>
-               </tab:code>
+<datatables:table id="myFirstTableId" data="${persons}" row="person" export="csv">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" />
+   <datatables:column title="Mail">
+      <a href="mailto:${person.mail}">${person.mail}</a>
+   </datatables:column>
+   <datatables:export type="csv" includeHeader="false" fileName="my-export-name" cssClass="btn" label="CSV without header row" />
+</datatables:table></tab:code>
             </tab:taglib>
             <tab:thymeleaf>
                <p class="alert alert-error">
@@ -85,17 +83,16 @@
             </tab:demo>
             <tab:taglib>
                <tab:code>
-                  <datatables:table id="mySecondTableId" data="${persons}" row="person" export="xls">
-                     <datatables:column title="Id" property="id" />
-                     <datatables:column title="FirstName" property="firstName" />
-                     <datatables:column title="LastName" property="lastName" />
-                     <datatables:column title="Street" property="address.street1" />
-                     <datatables:column title="Mail">
-                        <a href="mailto:${person.mail}">${person.mail}</a>
-                     </datatables:column>
-                     <datatables:export type="XLS" autoSize="true" fileName="my-export-name" cssClass="btn" label="XLS" />
-                  </datatables:table>
-               </tab:code>
+<datatables:table id="mySecondTableId" data="${persons}" row="person" export="xls">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" />
+   <datatables:column title="Mail">
+      <a href="mailto:${person.mail}">${person.mail}</a>
+   </datatables:column>
+   <datatables:export type="XLS" autoSize="true" fileName="my-export-name" cssClass="btn" label="XLS" />
+</datatables:table></tab:code>
             </tab:taglib>
             <tab:thymeleaf>
                <p class="alert alert-error">
@@ -128,19 +125,17 @@
             </tab:demo>
             <tab:taglib>
                <tab:code>
-                  <datatables:table id="myThirdTableId" data="${persons}" row="person" export="xls">
-                     <datatables:column title="Id" property="id" />
-                     <datatables:column title="FirstName" property="firstName" />
-                     <datatables:column title="LastName" property="lastName" />
-                     <datatables:column title="Street" property="address.street1" display="html" />
-                     <datatables:column title="Mail" display="html">
-                        <a href="mailto:${person.mail}">${person.mail}</a>
-                     </datatables:column>
-                     <datatables:column title="Mail" property="mail" display="csv,xls" />
-                     <datatables:export type="xls" includeHeader="true" fileName="my-export-name" cssClass="btn"
-                        label="xls" />
-                  </datatables:table>
-               </tab:code>
+<datatables:table id="myThirdTableId" data="${persons}" row="person" export="xls">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" display="html" />
+   <datatables:column title="Mail" display="html">
+      <a href="mailto:${person.mail}">${person.mail}</a>
+   </datatables:column>
+   <datatables:column title="Mail" property="mail" display="csv,xls" />
+   <datatables:export type="xls" includeHeader="true" fileName="my-export-name" cssClass="btn" label="xls" />
+</datatables:table></tab:code>
             </tab:taglib>
             <tab:thymeleaf>
                <p class="alert alert-error">
@@ -173,19 +168,18 @@
             </tab:demo>
             <tab:taglib>
                <tab:code>
-                  <datatables:table id="myFourthTableId" data="${persons}" row="person" export="pdf">
-                     <datatables:column title="Id" property="id" />
-                     <datatables:column title="FirstName" property="firstName" />
-                     <datatables:column title="LastName" property="lastName" />
-                     <datatables:column title="Street" property="address.street1" />
-                     <datatables:column title="Mail" display="html">
-                        <a href="mailto:${person.mail}">${person.mail}</a>
-                     </datatables:column>
-                     <datatables:column title="Mail" property="mail" display="csv,xls,pdf" />
-                     <datatables:export type="xls" includeHeader="true" fileName="my-export-name" cssClass="btn" />
-                     <datatables:export type="pdf" includeHeader="true" fileName="my-export-name" cssClass="btn" />
-                  </datatables:table>
-               </tab:code>
+<datatables:table id="myFourthTableId" data="${persons}" row="person" export="pdf">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" />
+   <datatables:column title="Mail" display="html">
+      <a href="mailto:${person.mail}">${person.mail}</a>
+   </datatables:column>
+   <datatables:column title="Mail" property="mail" display="csv,xls,pdf" />
+   <datatables:export type="xls" includeHeader="true" fileName="my-export-name" cssClass="btn" />
+   <datatables:export type="pdf" includeHeader="true" fileName="my-export-name" cssClass="btn" />
+</datatables:table></tab:code>
             </tab:taglib>
             <tab:thymeleaf>
                <p class="alert alert-error">

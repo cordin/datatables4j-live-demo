@@ -37,16 +37,15 @@
                </p>
                <p>Using this tag, you can for instance add CSS classes to the links or change the link's label</p>
                <tab:code>
-                  <datatables:table id="myFirstTableId" data="${persons}" export="csv,xml">
-                     <datatables:column title="Id" property="id" />
-                     <datatables:column title="FirstName" property="firstName" />
-                     <datatables:column title="LastName" property="lastName" />
-                     <datatables:column title="Street" property="address.street1" />
-                     <datatables:column title="Mail" property="mail" />
-                     <datatables:export type="csv" cssClass="btn btn-success" />
-                     <datatables:export type="xml" cssClass="btn btn-info" label="XML export !" />
-                  </datatables:table>
-               </tab:code>
+<datatables:table id="myFirstTableId" data="${persons}" export="csv,xml">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" />
+   <datatables:column title="Mail" property="mail" />
+   <datatables:export type="csv" cssClass="btn btn-success" />
+   <datatables:export type="xml" cssClass="btn btn-info" label="XML export !" />
+</datatables:table></tab:code>
             </tab:taglib>
             <tab:thymeleaf>
                <p class="alert alert-error">
@@ -58,8 +57,7 @@
       <div class="tab-pane" id="example2">
          <tab:tab>
             <tab:demo>
-               <datatables:table id="mySecondTableId" data="${persons}" export="csv,xml"
-                  exportLinks="top_right,bottom_right">
+               <datatables:table id="mySecondTableId" data="${persons}" export="csv,xml" exportLinks="top_right,bottom_right">
                   <datatables:column title="Id" property="id" />
                   <datatables:column title="FirstName" property="firstName" />
                   <datatables:column title="LastName" property="lastName" />
@@ -77,17 +75,15 @@
                </p>
                <p>This attribute makes reading data easier by repeating links at different positions.</p>
                <tab:code>
-                  <datatables:table id="mySecondTableId" data="${persons}" export="csv,xml"
-                     exportLinks="top_right,bottom_right">
-                     <datatables:column title="Id" property="id" />
-                     <datatables:column title="FirstName" property="firstName" />
-                     <datatables:column title="LastName" property="lastName" />
-                     <datatables:column title="Street" property="address.street1" />
-                     <datatables:column title="Mail" property="mail" />
-                     <datatables:export type="csv" cssClass="btn btn-info" />
-                     <datatables:export type="xml" cssClass="btn btn-info" />
-                  </datatables:table>
-               </tab:code>
+<datatables:table id="mySecondTableId" data="${persons}" export="csv,xml" exportLinks="top_right,bottom_right">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" />
+   <datatables:column title="Mail" property="mail" />
+   <datatables:export type="csv" cssClass="btn btn-info" />
+   <datatables:export type="xml" cssClass="btn btn-info" />
+</datatables:table></tab:code>
             </tab:taglib>
             <tab:thymeleaf>
                <p class="alert alert-error">

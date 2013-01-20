@@ -43,16 +43,15 @@
                   or whatever format your need among proposed ones.
                </p>
                <tab:code>
-                  <datatables:table id="myFirstTableId" data="${persons}" row="person" export="csv">
-                     <datatables:column title="Id" property="id" />
-                     <datatables:column title="FirstName" property="firstName" />
-                     <datatables:column title="LastName" property="lastName" />
-                     <datatables:column title="Street" property="address.street1" />
-                     <datatables:column title="Mail">
-                        <a href="mailto:${person.mail}">${person.mail}</a>
-                     </datatables:column>
-                  </datatables:table>
-               </tab:code>
+<datatables:table id="myFirstTableId" data="${persons}" row="person" export="csv">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" />
+   <datatables:column title="Mail">
+      <a href="mailto:${person.mail}">${person.mail}</a>
+   </datatables:column>
+</datatables:table></tab:code>
             </tab:taglib>
             <tab:thymeleaf>
                <p>
@@ -61,27 +60,26 @@
                   table attribute.
                </p>
                <tab:code>
-                  <table id="myTable" dt:table="true" dt:export="csv">
-                     <thead>
-                        <tr>
-                           <th>Id</th>
-                           <th>Firstname</th>
-                           <th>Lastname</th>
-                           <th>Street</th>
-                           <th>Mail</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr th:each="person : ${persons}">
-                           <td th:text="${person.id}">1</td>
-                           <td th:text="${person.firstName}">John</td>
-                           <td th:text="${person.lastName}">Doe</td>
-                           <td th:text="${person.address.street1}">Nobody knows !</td>
-                           <td><a th:href="${'mailto:' + person.mail}" th:text="${person.mail}">john@doe.com</a></td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </tab:code>
+<table id="myTable" dt:table="true" dt:export="csv">
+   <thead>
+      <tr>
+         <th>Id</th>
+         <th>Firstname</th>
+         <th>Lastname</th>
+         <th>Street</th>
+         <th>Mail</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr th:each="person : ${persons}">
+         <td th:text="${person.id}">1</td>
+         <td th:text="${person.firstName}">John</td>
+         <td th:text="${person.lastName}">Doe</td>
+         <td th:text="${person.address.street1}">Nobody knows !</td>
+         <td><a th:href="${'mailto:' + person.mail}" th:text="${person.mail}">john@doe.com</a></td>
+      </tr>
+   </tbody>
+</table></tab:code>
             </tab:thymeleaf>
          </tab:tab>
       </div>
@@ -102,9 +100,11 @@
             <tab:taglib>
                <p>For PDF export, first, make sure you added either FOP or iText dependency.</p>
                <tab:code>
-                  <dependency> <groupId>com.github.datatables4j</groupId> <artifactId>datatables4j-export-itext</artifactId>
-                  <version>0.1.1-SNAPSHOT</version> </dependency>
-               </tab:code>
+<dependency> 
+   <groupId>com.github.datatables4j</groupId>
+   <artifactId>datatables4j-export-itext</artifactId>
+   <version>0.1.1</version>
+</dependency></tab:code>
                <p>
                   Then, just set the
                   <code>export</code>
@@ -113,16 +113,15 @@
                   .
                </p>
                <tab:code>
-                  <datatables:table id="mySecondTableId" data="${persons}" row="person" export="pdf">
-                     <datatables:column title="Id" property="id" />
-                     <datatables:column title="FirstName" property="firstName" />
-                     <datatables:column title="LastName" property="lastName" />
-                     <datatables:column title="Street" property="address.street1" />
-                     <datatables:column title="Mail">
-                        <a href="mailto:${person.mail}">${person.mail}</a>
-                     </datatables:column>
-                  </datatables:table>
-               </tab:code>
+<datatables:table id="mySecondTableId" data="${persons}" row="person" export="pdf">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" />
+   <datatables:column title="Mail">
+      <a href="mailto:${person.mail}">${person.mail}</a>
+   </datatables:column>
+</datatables:table></tab:code>
                <p>The above dependency embeds :
                <ul>
                   <li>the iText library (see the <a
@@ -138,27 +137,26 @@
             </tab:taglib>
             <tab:thymeleaf>
                <tab:code>
-                  <table id="myTable" dt:table="true" dt:export="pdf">
-                     <thead>
-                        <tr>
-                           <th>Id</th>
-                           <th>Firstname</th>
-                           <th>Lastname</th>
-                           <th>Street</th>
-                           <th>Mail</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr th:each="person : ${persons}">
-                           <td th:text="${person.id}">1</td>
-                           <td th:text="${person.firstName}">John</td>
-                           <td th:text="${person.lastName}">Doe</td>
-                           <td th:text="${person.address.street1}">Nobody knows !</td>
-                           <td><a th:href="${'mailto:' + person.mail}" th:text="${person.mail}">john@doe.com</a></td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </tab:code>
+<table id="myTable" dt:table="true" dt:export="pdf">
+   <thead>
+      <tr>
+         <th>Id</th>
+         <th>Firstname</th>
+         <th>Lastname</th>
+         <th>Street</th>
+         <th>Mail</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr th:each="person : ${persons}">
+         <td th:text="${person.id}">1</td>
+         <td th:text="${person.firstName}">John</td>
+         <td th:text="${person.lastName}">Doe</td>
+         <td th:text="${person.address.street1}">Nobody knows !</td>
+         <td><a th:href="${'mailto:' + person.mail}" th:text="${person.mail}">john@doe.com</a></td>
+      </tr>
+   </tbody>
+</table></tab:code>
             </tab:thymeleaf>
          </tab:tab>
       </div>
@@ -183,40 +181,38 @@
                   table attribute.
                </p>
                <tab:code>
-                  <datatables:table id="myThirdTableId" data="${persons}" row="person" export="pdf,xls,csv">
-                     <datatables:column title="Id" property="id" />
-                     <datatables:column title="FirstName" property="firstName" />
-                     <datatables:column title="LastName" property="lastName" />
-                     <datatables:column title="Street" property="address.street1" />
-                     <datatables:column title="Mail">
-                        <a href="mailto:${person.mail}">${person.mail}</a>
-                     </datatables:column>
-                  </datatables:table>
-               </tab:code>
+<datatables:table id="myThirdTableId" data="${persons}" row="person" export="pdf,xls,csv">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="Street" property="address.street1" />
+   <datatables:column title="Mail">
+      <a href="mailto:${person.mail}">${person.mail}</a>
+   </datatables:column>
+</datatables:table></tab:code>
             </tab:taglib>
             <tab:thymeleaf>
                <tab:code>
-                  <table id="myThirdTableId" dt:table="true" dt:export="pdf,xls,csv">
-                     <thead>
-                        <tr>
-                           <th>Id</th>
-                           <th>Firstname</th>
-                           <th>Lastname</th>
-                           <th>Street</th>
-                           <th>Mail</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr th:each="person : ${persons}">
-                           <td th:text="${person.id}">1</td>
-                           <td th:text="${person.firstName}">John</td>
-                           <td th:text="${person.lastName}">Doe</td>
-                           <td th:text="${person.address.street1}">Nobody knows !</td>
-                           <td th:text="${person.mail}">john@doe.com</td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </tab:code>
+<table id="myThirdTableId" dt:table="true" dt:export="pdf,xls,csv">
+   <thead>
+      <tr>
+         <th>Id</th>
+         <th>Firstname</th>
+         <th>Lastname</th>
+         <th>Street</th>
+         <th>Mail</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr th:each="person : ${persons}">
+         <td th:text="${person.id}">1</td>
+         <td th:text="${person.firstName}">John</td>
+         <td th:text="${person.lastName}">Doe</td>
+         <td th:text="${person.address.street1}">Nobody knows !</td>
+         <td th:text="${person.mail}">john@doe.com</td>
+      </tr>
+   </tbody>
+</table></tab:code>
             </tab:thymeleaf>
          </tab:tab>
       </div>
