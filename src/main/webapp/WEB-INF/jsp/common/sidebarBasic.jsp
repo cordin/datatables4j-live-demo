@@ -7,6 +7,7 @@
 <div class="span2 bs-docs-sidebar">
    <ul class="nav nav-list bs-docs-sidenav affix">
       <li class=""><a href="${basic}/default"><i class="icon-chevron-right"></i> Default configuration</a></li>
+      <li><a href="${basic}/appear"><i class="icon-chevron-right"></i> Changing the appearance</a></li>
       <li><a href="${basic}/info"><i class="icon-chevron-right"></i> Display table informations</a></li>
       <li><a href="${basic}/sorting"><i class="icon-chevron-right"></i> Table sorting</a></li>
       <li><a href="${basic}/filtering"><i class="icon-chevron-right"></i> Table filtering</a></li>
