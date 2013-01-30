@@ -4,13 +4,13 @@
    
    <!-- Basic layout -->
    <definition name="pluginLayout" extends="mainLayout">
-      <put-attribute name="sidebar" value="/WEB-INF/jsp/common/sidebarPlugin.jsp" cascade="true" />
+      <put-attribute name="sidebar" value="/WEB-INF/views/jsp/common/sidebarPlugin.jsp" cascade="true" />
    </definition>
    
    <definition name="plugins.*" extends="pluginLayout">
       <put-attribute name="tabPlugins" value="active" />
       <put-attribute name="title" value="Plugins - DataTables4j" />
-      <put-attribute name="content" value="/WEB-INF/jsp/plugins/{1}.jsp" />
+      <put-attribute name="content" value="/WEB-INF/views/jsp/plugins/{1}.jsp" />
    </definition>
 
 </tiles-definitions>
