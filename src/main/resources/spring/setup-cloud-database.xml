@@ -7,14 +7,15 @@
 
    <bean id="jpaVendorAdapter"
       class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
-      <property name="showSql" value="true" />
+      <property name="showSql" value="false" />
       <property name="database" value="MYSQL" />
       <property name="generateDdl" value="false" />
    </bean>
 
+   <!-- 
+
    <jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/dt4jdb" />
    
-   <!-- 
    <context:property-placeholder location="file:D:\Dev\database.properties" />
    <bean id="dataSource"
       class="org.springframework.jdbc.datasource.DriverManagerDataSource">

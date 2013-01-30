@@ -1,3 +1,4 @@
+<!-- 
 <Context>
    <Loader delegate="true" />
    <Resource name="jdbc/dt4jdb" auth="Container" type="javax.sql.DataSource"
@@ -5,3 +6,4 @@
       driverClassName="com.mysql.jdbc.Driver" password="dt4jdbpwd"
       url="jdbc:mysql://ec2-50-19-213-178.compute-1.amazonaws.com:3306/dt4jdb" />
 </Context>
+ -->
