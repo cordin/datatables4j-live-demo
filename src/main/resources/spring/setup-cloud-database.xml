@@ -12,17 +12,14 @@
       <property name="generateDdl" value="false" />
    </bean>
 
-   <!-- 
-
-   <jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/dt4jdb" />
-   
-   <context:property-placeholder location="file:D:\Dev\database.properties" />
+   <!-- <jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/dt4jdb" 
+      /> <context:property-placeholder location="file:D:\Dev\database.properties" 
+      <property name="url" value="${dt4j.url}" />
+      /> -->
    <bean id="dataSource"
       class="org.springframework.jdbc.datasource.DriverManagerDataSource">
       <property name="driverClassName" value="${dt4j.driver}" />
-      <property name="url" value="${dt4j.url}" />
       <property name="username" value="${dt4j.username}" />
       <property name="password" value="${dt4j.password}" />
    </bean>
-    -->
 </beans>
