@@ -4,8 +4,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.github.datatables4j.core.base.ajax.DataSet;
+import com.github.datatables4j.core.base.ajax.DatatablesCriterias;
 import com.github.datatables4j.demo.entity.Person;
-
 
 /**
  * Service that manages the persons.
@@ -15,18 +16,12 @@ import com.github.datatables4j.demo.entity.Person;
 @Service
 public interface PersonService {
 
-	/**
-	 * Returns 100 persons among the full list.
-	 * 
-	 * @return List<Person> 100 persons.
-	 */
-	public List<Person> get100();
+	public List<Person> findAll();
 	
 	/**
-	 * Returns 1000 persons among the full list.
-	 * 
-	 * @return List<Person> 1000 persons.
+	 * TODO
+	 * @param criterias
+	 * @return
 	 */
-	public List<Person> get1000();
-
+	public DataSet<Person> findPersonsWithDatatablesCriterias(DatatablesCriterias criterias);
 }
