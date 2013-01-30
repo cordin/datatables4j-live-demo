@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.github.datatables4j.demo.entity.Person;
 import com.github.datatables4j.demo.service.PersonService;
@@ -16,48 +15,55 @@ import com.github.datatables4j.demo.service.PersonService;
 /**
  * Controllers for the all demo examples.
  * 
- * @author tduchateau
+ * @author Thibault Duchateau
  */
 @Controller
 @RequestMapping(method = RequestMethod.GET)
 public class DemoController {
-	
+
 	@Autowired
-	private PersonService personCoordinator;
-	
+	private PersonService personService;
+
+	/**
+	 * <p>
+	 * This model attribute populates all the tables that use client-side
+	 * processing, i.e. all DOM examples and also AJAX source.
+	 * 
+	 * @return the entire set of persons.
+	 */
 	@ModelAttribute("persons")
-	public List<Person> populateTable(){
-		return personCoordinator.get100();
+	public List<Person> populateTable() {
+		return personService.findAll();
 	}
-	
-	@RequestMapping(value="/personsWs", method = RequestMethod.GET)
-	public @ResponseBody List<Person> getPersonss(){
-		return personCoordinator.get100();
-	}
-	
-	@RequestMapping(value="/basic/{page}")
-	public String goToBasicExample(@PathVariable String page){
+
+	@RequestMapping(value = "/basic/{page}")
+	public String goToBasicExample(@PathVariable String page) {
 		return "basic." + page;
 	}
-	
-	@RequestMapping(value="/advanced/{page}")
-	public String goToAdvancedExample(@PathVariable String page){
+
+	@RequestMapping(value = "/advanced/{page}")
+	public String goToAdvancedExample(@PathVariable String page) {
 		return "advanced." + page;
 	}
-	
-	@RequestMapping(value="/features/{page}")
-	public String goToFeatureExample(@PathVariable String page){
+
+	@RequestMapping(value = "/ajax/{page}")
+	public String goToAjaxExample(@PathVariable String page) {
+		return "ajax." + page;
+	}
+
+	@RequestMapping(value = "/features/{page}")
+	public String goToFeatureExample(@PathVariable String page) {
 		return "features." + page;
 	}
-	
-	@RequestMapping(value="/themes/{page}")
-	public String goToThemeExample(@PathVariable String page){
+
+	@RequestMapping(value = "/themes/{page}")
+	public String goToThemeExample(@PathVariable String page) {
 		return "themes." + page;
 	}
-	
-	@RequestMapping(value="/plugins/{page}")
-	public String goToPluginExample(@PathVariable String page){
+
+	@RequestMapping(value = "/plugins/{page}")
+	public String goToPluginExample(@PathVariable String page) {
 		return "plugins." + page;
 	}
-	
+
 }
