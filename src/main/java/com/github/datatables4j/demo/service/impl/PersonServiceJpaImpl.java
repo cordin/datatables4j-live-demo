@@ -29,7 +29,6 @@ public class PersonServiceJpaImpl implements PersonService {
 	public DataSet<Person> findPersonsWithDatatablesCriterias(DatatablesCriterias criterias){
 	
 		List<Person> persons = personDao.findPersonWithDatatablesCriterias(criterias);
-		System.out.println("persons = " + persons);
 		Long count = personDao.getTotalCount();
 		Long countFiltered = personDao.getFilteredCount(criterias);
 		

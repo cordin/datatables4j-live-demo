@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.github.datatables4j.core.base.ajax.DataSet;
 import com.github.datatables4j.core.base.ajax.DatatablesCriterias;
-import com.github.datatables4j.core.base.ajax.DatatablesServerResponse;
+import com.github.datatables4j.core.base.ajax.DatatablesResponse;
 import com.github.datatables4j.demo.entity.Person;
 import com.github.datatables4j.demo.service.PersonService;
 import com.github.datatables4j.spring3.ajax.DatatablesParams;
@@ -42,17 +42,16 @@ public class SpringMvcAjaxController {
 
 	@RequestMapping(value = "/persons1", method = RequestMethod.GET)
 	public @ResponseBody
-	DatatablesServerResponse<Person> getPersons(HttpServletRequest request) {
+	DatatablesResponse<Person> getPersons(HttpServletRequest request) {
 		DatatablesCriterias criterias = DatatablesCriterias.getFromRequest(request);
 		DataSet<Person> persons = personService.findPersonsWithDatatablesCriterias(criterias);
-		return DatatablesServerResponse.build(persons, criterias);
+		return DatatablesResponse.build(persons, criterias);
 	}
 
 	@RequestMapping(value = "/persons2")
 	public @ResponseBody
-	DatatablesServerResponse<Person> getCustomers1(@DatatablesParams DatatablesCriterias criterias) {
+	DatatablesResponse<Person> getCustomers1(@DatatablesParams DatatablesCriterias criterias) {
 		DataSet<Person> dataSet = personService.findPersonsWithDatatablesCriterias(criterias);
-		System.out.println("dataSet = " + dataSet);
-		return DatatablesServerResponse.build(dataSet, criterias);
+		return DatatablesResponse.build(dataSet, criterias);
 	}
 }
