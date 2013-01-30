@@ -14,18 +14,18 @@
    <mvc:resources location="/assets/css/" mapping="/css/**" />
    <mvc:resources location="/assets/js/" mapping="/js/**" />
    <mvc:resources location="/assets/font/" mapping="/font/**" />
-   
+
    <!-- Defines basic MVC defaults (handler adapter, mapping, date formatting, 
       etc) -->
    <!-- JSR-303 support will be detected on classpath and enabled automatically -->
-   <mvc:annotation-driven />
+   <mvc:annotation-driven>
+      <mvc:argument-resolvers>
+         <bean class="com.github.datatables4j.spring3.ajax.DatatablesCriteriasResolver" />
+      </mvc:argument-resolvers>
+   </mvc:annotation-driven>
 
    <!-- Scan des beans Spring (controlleurs et autres) -->
    <context:component-scan base-package="com.github.datatables4j" />
-
-   <!-- Configures a handler for serving static resources by forwarding to 
-      the Servlet container's default Servlet. -->
-   <mvc:default-servlet-handler />
 
    <!-- Configures a handler for serving static resources by forwarding to 
       the Servlet container's default Servlet. -->
