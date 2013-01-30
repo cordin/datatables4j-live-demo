@@ -12,7 +12,7 @@
    <div class="span5 offset3">
       <a href="http://datatables.net/"> <img src="<c:url value="/img/logo_DataTables4j.png" />" style="float: left; margin-right: 20px;" />
       </a>
-      <h2>Live DataTables4j JSP demo</h2>
+      <h2>DataTables4j Live Demo</h2>
       <hr />
    </div>
 </div>
@@ -52,7 +52,7 @@
       <h3>
          <i class="icon-refresh"></i> AJAX examples
       </h3>
-      <p>You may need to use the AJAX features for large data sets !</p>
+      <p>For AJAX sources and server-side processing, it's right here !</p>
       <p>
          <a class="btn" href="${ajax}/home">View details »</a>
       </p>

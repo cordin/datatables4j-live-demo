@@ -21,17 +21,30 @@ public class PersonServiceJpaImpl implements PersonService {
 
 	@Autowired
 	private PersonDao personDao;
-	
-	public List<Person> findAll(){
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public List<Person> findAll() {
 		return personDao.findAll();
 	}
 
-	public DataSet<Person> findPersonsWithDatatablesCriterias(DatatablesCriterias criterias){
-	
+	/**
+	 * {@inheritDoc}
+	 */
+	public List<Person> findLimited(int maxResult) {
+		return personDao.findLimited(maxResult);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public DataSet<Person> findPersonsWithDatatablesCriterias(DatatablesCriterias criterias) {
+
 		List<Person> persons = personDao.findPersonWithDatatablesCriterias(criterias);
 		Long count = personDao.getTotalCount();
 		Long countFiltered = personDao.getFilteredCount(criterias);
-		
+
 		return new DataSet<Person>(persons, count, countFiltered);
 	}
 }

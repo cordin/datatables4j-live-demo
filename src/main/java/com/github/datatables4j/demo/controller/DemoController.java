@@ -33,7 +33,7 @@ public class DemoController {
 	 */
 	@ModelAttribute("persons")
 	public List<Person> populateTable() {
-		return personService.findAll();
+		return personService.findLimited(200);
 	}
 
 	@RequestMapping(value = "/basic/{page}")

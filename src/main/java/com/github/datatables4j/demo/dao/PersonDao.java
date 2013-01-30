@@ -17,9 +17,7 @@ import com.github.datatables4j.core.base.ajax.DatatablesCriterias;
 import com.github.datatables4j.demo.entity.Person;
 
 /**
- * TEST AVEC SPRING et JPA
- * 
- * TODO voir les CriteriaBuilder
+ * DAO for the Person entity.
  * 
  * @author Thibault Duchateau
  */
@@ -29,6 +27,9 @@ public class PersonDao {
 	@PersistenceContext
 	private EntityManager entityManager;
 
+	/**
+	 * @return the complete list of persons.
+	 */
 	public List<Person> findAll() {
 		TypedQuery<Person> query = entityManager
 				.createQuery("SELECT p FROM Person p", Person.class);
@@ -36,17 +37,34 @@ public class PersonDao {
 	}
 
 	/**
-	 * TODO
+	 * @param maxResult
+	 *            Max number of persons.
+	 * @return a maxResult limited list of persons.
+	 */
+	public List<Person> findLimited(int maxResult) {
+		TypedQuery<Person> query = entityManager
+				.createQuery("SELECT p FROM Person p", Person.class);
+		query.setMaxResults(maxResult);
+		return query.getResultList();
+	}
+
+	/**
+	 * <p>
+	 * Query used to populate the DataTables that display the list of persons.
 	 * 
 	 * @param criterias
-	 * @return
+	 *            The DataTables criterias used to filter the persons.
+	 *            (maxResult, filtering, paging, ...)
+	 * @return a filtered list of persons.
 	 */
 	public List<Person> findPersonWithDatatablesCriterias(DatatablesCriterias criterias) {
 
 		StringBuilder queryBuilder = new StringBuilder("SELECT p FROM Person p");
 		List<String> paramList = new ArrayList<String>();
 
-		// Filtering
+		/**
+		 * 1st step : filtering
+		 */
 		if (StringUtils.isNotBlank(criterias.getSearch()) && criterias.hasOneFilterableColumn()) {
 			queryBuilder.append(" WHERE ");
 
@@ -66,7 +84,9 @@ public class PersonDao {
 			}
 		}
 
-		// Sorting
+		/**
+		 * 2nd step : sorting
+		 */
 		if (criterias.hasOneSortedColumn()) {
 
 			List<String> orderParams = new ArrayList<String>();
@@ -89,6 +109,9 @@ public class PersonDao {
 
 		TypedQuery<Person> query = entityManager.createQuery(queryBuilder.toString(), Person.class);
 
+		/**
+		 * 3rd step : paging
+		 */
 		query.setFirstResult(criterias.getDisplayStart());
 		query.setMaxResults(criterias.getDisplaySize());
 
@@ -96,9 +119,13 @@ public class PersonDao {
 	}
 
 	/**
-	 * TODO
+	 * <p>
+	 * Query used to return the number of filtered persons.
+	 * 
 	 * @param criterias
-	 * @return
+	 *            The DataTables criterias used to filter the persons.
+	 *            (maxResult, filtering, paging, ...)
+	 * @return the number of filtered persons.
 	 */
 	public Long getFilteredCount(DatatablesCriterias criterias) {
 
@@ -130,8 +157,7 @@ public class PersonDao {
 	}
 
 	/**
-	 * TODO
-	 * @return
+	 * @return the total count of persons.
 	 */
 	public Long getTotalCount() {
 		Query query = entityManager.createQuery("SELECT COUNT(p) FROM Person p");

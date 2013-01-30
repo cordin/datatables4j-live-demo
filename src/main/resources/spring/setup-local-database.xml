@@ -4,8 +4,7 @@
    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd"
    profile="local">
 
-   <bean id="jpaVendorAdapter"
-      class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+   <bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
       <property name="showSql" value="false" />
       <property name="database" value="H2" />
       <property name="generateDdl" value="true" />

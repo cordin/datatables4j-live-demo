@@ -36,13 +36,13 @@ public class SpringMvcAjaxController {
 
 	@RequestMapping(value = "/persons")
 	public @ResponseBody
-	List<Person> getPersonss(HttpServletRequest request) {
+	List<Person> findAll(HttpServletRequest request) {
 		return personService.findAll();
 	}
 
 	@RequestMapping(value = "/persons1", method = RequestMethod.GET)
 	public @ResponseBody
-	DatatablesResponse<Person> getPersons(HttpServletRequest request) {
+	DatatablesResponse<Person> findAllForDataTables(HttpServletRequest request) {
 		DatatablesCriterias criterias = DatatablesCriterias.getFromRequest(request);
 		DataSet<Person> persons = personService.findPersonsWithDatatablesCriterias(criterias);
 		return DatatablesResponse.build(persons, criterias);
@@ -50,7 +50,7 @@ public class SpringMvcAjaxController {
 
 	@RequestMapping(value = "/persons2")
 	public @ResponseBody
-	DatatablesResponse<Person> getCustomers1(@DatatablesParams DatatablesCriterias criterias) {
+	DatatablesResponse<Person> findAllForDataTablesFullSpring(@DatatablesParams DatatablesCriterias criterias) {
 		DataSet<Person> dataSet = personService.findPersonsWithDatatablesCriterias(criterias);
 		return DatatablesResponse.build(dataSet, criterias);
 	}
