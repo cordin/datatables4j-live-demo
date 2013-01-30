@@ -1,63 +1,64 @@
 package com.github.datatables4j.demo.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
 /**
  * A typical Address entity.
  * 
  * @author tduchateau
  */
+@Entity
 public class Address {
 
-	private String street1;
-	private String street2;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+
+	@Column
+	private String street;
+
+	@OneToOne
+	@JoinColumn(name = "town_id")
 	private Town town;
 
-	public Address(String street1, Town town) {
-		this.street1 = street1;
-		this.town = town;
+	public Address() {
+
 	}
 
-	/**
-	 * @return the town
-	 */
+	public Address(String street) {
+		this.street = street;
+	}
+
 	public Town getTown() {
 		return town;
 	}
 
-	/**
-	 * @param town
-	 *            the town to set
-	 */
 	public void setTown(Town town) {
 		this.town = town;
 	}
 
-	/**
-	 * @return the street2
-	 */
-	public String getStreet2() {
-		return street2;
+	public Long getId() {
+		return id;
 	}
 
-	/**
-	 * @param street2
-	 *            the street2 to set
-	 */
-	public void setStreet2(String street2) {
-		this.street2 = street2;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
-	/**
-	 * @return the street1
-	 */
-	public String getStreet1() {
-		return street1;
+	public String getStreet() {
+		return street;
 	}
 
-	/**
-	 * @param street1
-	 *            the street1 to set
-	 */
-	public void setStreet1(String street1) {
-		this.street1 = street1;
+	public void setStreet(String street) {
+		this.street = street;
 	}
+
+	
+
 }
