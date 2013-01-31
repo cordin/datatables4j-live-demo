@@ -4,6 +4,10 @@
 <div class="row-fluid">
    <div class="span12">
       <h3>Scroller</h3>
+      <p class="alert alert-error">
+         <strong>Alert !</strong><br />
+         The plugin is bugged in the latest DataTables4j version (0.8.2) due to a CSS issue. Sorry for that :-/
+      </p>
       <p>
          <a href="http://www.datatables.net/extras/scroller/" class="btn btn-success" style="float: right;">See the
             plugin home</a> This plugin allows you to scroll inside the table data.
@@ -26,7 +30,7 @@
 
 <tab:tab>
    <tab:demo>
-      <datatables:table id="myTableId" data="${persons}" scroller="true">
+      <datatables:table id="myTableId" data="${persons}" scroller="true" appear="block">
          <datatables:column title="Id" property="id" />
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />

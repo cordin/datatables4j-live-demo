@@ -12,7 +12,7 @@
 
 <tab:tab>
    <tab:demo>
-      <datatables:table id="myTableId" data="${persons}" scroller="true">
+      <datatables:table id="myTableId" data="${persons}" colReorder="true">
          <datatables:column title="Id" property="id" />
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />
@@ -23,15 +23,14 @@
    </tab:demo>
    <tab:taglib>
       <tab:code>
-         <datatables:table id="myTableId" data="${persons}" scroller="true">
-            <datatables:column title="Id" property="id" />
-            <datatables:column title="FirstName" property="firstName" />
-            <datatables:column title="LastName" property="lastName" />
-            <datatables:column title="City" property="address.town.name" />
-            <datatables:column title="Mail" property="mail" />
-            <datatables:prop name="aggregator.enable" value="true" />
-         </datatables:table>
-      </tab:code>
+<datatables:table id="myTableId" data="${persons}" scroller="true">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="City" property="address.town.name" />
+   <datatables:column title="Mail" property="mail" />
+   <datatables:prop name="aggregator.enable" value="true" />
+</datatables:table></tab:code>
    </tab:taglib>
    <tab:thymeleaf>
       <p class="alert alert-error">
