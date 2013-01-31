@@ -11,7 +11,7 @@
 <c:url value="/features" var="features" />
 <c:url value="/plugins" var="plugins" />
 
-<a href="https://github.com/datatables4j/datatables4j-demo-jsp"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1500;"
+<a href="https://github.com/datatables4j/datatables4j-live-demo"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1500;"
    src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"
 /></a>
 <div class="navbar navbar-fixed-top">
@@ -35,9 +35,9 @@
                   ></b></a>
                   <ul class="dropdown-menu">
                      <li><a href="https://github.com/datatables4j/issues/issues">Issues / Enhancements</a></li>
-                     <li><a href="http://datatables.net/forums/discussion/10138/">DataTables forum</a></li>
-                     <li class="divider"></li>
                      <li><a href="http://datatables4j.github.com/docs/">DataTables4j home</a></li>
+                     <li><a href="http://demo.thymeleaf.datatables4j.cloudbees.net/">Thymeleaf Live Demo</a></li>
+                     <li class="divider"></li>
                      <li><a href="http://datatables.net/">DataTables home</a></li>
                   </ul></li>
             </ul>

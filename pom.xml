@@ -3,7 +3,7 @@
    <modelVersion>4.0.0</modelVersion>
 
    <groupId>com.github.datatables4j</groupId>
-   <artifactId>datatables4j-demo-jsp</artifactId>
+   <artifactId>datatables4j-live-demo</artifactId>
    <version>0.8.2-SNAPSHOT</version>
    <packaging>war</packaging>
 
@@ -16,10 +16,10 @@
       <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
       <!-- Dependencies -->
-      <datatables4j.version>0.8.2-SNAPSHOT</datatables4j.version>
-      <datatables4j.compressor.version>0.3.4-SNAPSHOT</datatables4j.compressor.version>
-      <datatables4j.export.poi.version>0.1.2-SNAPSHOT</datatables4j.export.poi.version>
-      <datatables4j.export.itext.version>0.1.2-SNAPSHOT</datatables4j.export.itext.version>
+      <datatables4j.version>0.8.2</datatables4j.version>
+      <datatables4j.compressor.version>0.3.4</datatables4j.compressor.version>
+      <datatables4j.export.poi.version>0.1.2</datatables4j.export.poi.version>
+      <datatables4j.export.itext.version>0.1.2</datatables4j.export.itext.version>
       <spring.version>3.2.0.RELEASE</spring.version>
       <hibernate.version>4.1.9.Final</hibernate.version>
    </properties>

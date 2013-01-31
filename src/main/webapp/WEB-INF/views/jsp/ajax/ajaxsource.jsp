@@ -22,7 +22,7 @@
          <code>@ResponseBody</code>
          annotation (<a href="http://blog.springsource.org/2010/01/25/ajax-simplifications-in-spring-3-0/">available
             since Spring 3.0</a>). You can see the code <a
-            href="https://github.com/datatables4j/datatables4j-demo-jsp/blob/master/src/main/java/com/github/datatables4j/demo/ajax/SpringMvcAjaxController.java#L37-L40">here</a>.
+            href="https://github.com/datatables4j/datatables4j-live-demo/blob/master/src/main/java/com/github/datatables4j/demo/ajax/SpringMvcAjaxController.java#L37-L40">here</a>.
       </p>
       <p>
          Since Spring performs the JSON serialization using the default Jackson JSON processor, make sure to have the <a
