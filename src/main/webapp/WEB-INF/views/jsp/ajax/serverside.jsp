@@ -19,7 +19,7 @@
          supports server-side processing by providing some utility classes that should help you to set this up.
       </p>
       <h4>What is server-side processing using DataTables4j ?</h4>
-      <p>The following steps are performed :
+      <p>Actually, the following steps are performed :
       <ol>
          <li>On table loading (or on every action performed on it), an XHR request is sent to the server with the
             DataTables parameters</li>
@@ -40,15 +40,21 @@
          to set this up.
       <p>
       <ul>
-         <li>Prepare the needed SQL queries using your favorite ORM framework<br />The following example uses the
-            Hibernate implementation of JPA.
+         <li>Prepare the needed SQL queries using your favorite ORM framework<br />Waiting for other implementations are
+            added, you can browse the following example that uses <a
+            href="https://github.com/datatables4j/datatables4j-live-demo/blob/master/src/main/java/com/github/datatables4j/demo/dao/PersonDao.java">the
+               Hibernate implementation of JPA</a>.
          </li>
-         <li>Adapt existing or create new business services using the <strong>DataTables4j</strong> utility classes
+         <li>Adapt existing or create new <a
+            href="https://github.com/datatables4j/datatables4j-live-demo/blob/master/src/main/java/com/github/datatables4j/demo/service/impl/PersonServiceJpaImpl.java">business
+               services</a> using the <strong>DataTables4j</strong> utility classes
          </li>
          <li>Create the web service that will be used by DataTables to perform the AJAX request using the <strong>DataTables4j</strong>
-            utility classes<br /> The following example uses AJAX-enabled Spring controllers
+            utility classes<br /> The following example uses <a
+            href="https://github.com/datatables4j/datatables4j-live-demo/blob/master/src/main/java/com/github/datatables4j/demo/ajax/SpringMvcAjaxController.java">AJAX-enabled
+               Spring controllers</a>
          </li>
-         <li>Use the right DataTables4j markup to activate server-side processing !</li>
+         <li>Use the right DataTables4j markup to activate server-side processing. Take a look just below !</li>
       </ul>
       </p>
       <br />

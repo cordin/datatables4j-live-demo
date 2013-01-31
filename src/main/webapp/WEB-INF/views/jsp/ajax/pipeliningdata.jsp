@@ -23,7 +23,7 @@
 
 <tab:tab>
    <tab:demo>
-      <datatables:table id="myTableId" url="/persons1" serverSide="true" processing="true" pipelining="true" pipeSize="6">
+      <datatables:table id="myTableId" url="/persons2" serverSide="true" processing="true" pipelining="true" pipeSize="6">
          <datatables:column title="Id" property="id" />
          <datatables:column title="FirstName" property="firstName" />
          <datatables:column title="LastName" property="lastName" />

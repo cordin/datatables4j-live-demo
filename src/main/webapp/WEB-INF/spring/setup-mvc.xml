@@ -10,17 +10,23 @@
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
+   <!-- **************************************************************** -->
+   <!-- RESOURCE FOLDERS CONFIGURATION -->
+   <!-- Dispatcher configuration for serving static resources -->
+   <!-- **************************************************************** -->
    <mvc:resources location="/assets/img/" mapping="/img/**" />
    <mvc:resources location="/assets/css/" mapping="/css/**" />
    <mvc:resources location="/assets/js/" mapping="/js/**" />
    <mvc:resources location="/assets/font/" mapping="/font/**" />
 
-   <!-- Defines basic MVC defaults (handler adapter, mapping, date formatting, 
-      etc) -->
-   <!-- JSR-303 support will be detected on classpath and enabled automatically -->
+
+   <!-- **************************************************************** -->
+   <!-- SPRING ANNOTATION PROCESSING -->
+   <!-- **************************************************************** -->
    <mvc:annotation-driven>
       <mvc:argument-resolvers>
-         <bean class="com.github.datatables4j.spring3.ajax.DatatablesCriteriasResolver" />
+         <bean
+            class="com.github.datatables4j.spring3.ajax.DatatablesCriteriasResolver" />
       </mvc:argument-resolvers>
    </mvc:annotation-driven>
 
