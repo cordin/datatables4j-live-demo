@@ -32,15 +32,13 @@
 
          <li>Add the YUI Compressor module (or any other compression module) to your classpath :
             <ul>
-               <li>Using Maven or Maven-compatible dependency manager, just add the following dependency to your POM : <pre class="prettyprint">
-                     <span class="tag">&lt;dependency&gt;</span>
-    <span class="pln"></span><span class="tag">&lt;groupId&gt;</span><span class="pln">com.github.datatables4j</span><span
-                        class="tag">&lt;/groupId&gt;</span>
-    <span class="pln"></span><span class="tag">&lt;artifactId&gt;</span><span class="pln">datatables4j-compression-yui</span><span
-                        class="tag">&lt;/artifactId&gt;</span>
-    <span class="pln"></span><span class="tag">&lt;version&gt;</span><span class="pln">0.3.1-SNAPSHOT</span><span
-                        class="tag">&lt;/version&gt;</span>
-<span class="pln"></span><span class="tag">&lt;/dependency&gt;</span><span class="pln"></span>
+               <li>Using Maven or Maven-compatible dependency manager, just add the following dependency to your POM : 
+<pre class="prettyprint">
+&lt;dependency>
+   &lt;groupId>com.github.datatables4j&lt;/groupId>
+   &lt;artifactId>datatables4j-compression-yui&lt;/artifactId>
+   &lt;version>0.3.3&lt;/version>
+&lt;/dependency>
 </pre>
 
                </li>
@@ -70,15 +68,14 @@
    </tab:demo>
    <tab:taglib>
       <tab:code>
-         <datatables:table id="myTableId" data="${persons}">
-            <datatables:column title="Id" property="id" />
-            <datatables:column title="FirstName" property="firstName" />
-            <datatables:column title="LastName" property="lastName" />
-            <datatables:column title="City" property="address.town.name" />
-            <datatables:column title="Mail" property="mail" />
-            <datatables:prop name="compressor.enable" value="true" />
-         </datatables:table>
-      </tab:code>
+<datatables:table id="myTableId" data="${persons}">
+   <datatables:column title="Id" property="id" />
+   <datatables:column title="FirstName" property="firstName" />
+   <datatables:column title="LastName" property="lastName" />
+   <datatables:column title="City" property="address.town.name" />
+   <datatables:column title="Mail" property="mail" />
+   <datatables:prop name="compressor.enable" value="true" />
+</datatables:table></tab:code>
    </tab:taglib>
    <tab:thymeleaf>
       <p class="alert alert-error">

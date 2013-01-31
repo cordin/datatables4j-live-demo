@@ -17,7 +17,10 @@ import com.github.datatables4j.core.base.ajax.DatatablesCriterias;
 import com.github.datatables4j.demo.entity.Person;
 
 /**
+ * <p>
  * DAO for the Person entity.
+ * <p>
+ * All queries are built using plain old JPA based on ugly Strings.
  * 
  * @author Thibault Duchateau
  */

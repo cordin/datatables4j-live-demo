@@ -11,7 +11,6 @@
       <li><a href="${advanced}/extraconf"><i class="icon-chevron-right"></i> Using extra conf</a></li>
       <li><a href="${advanced}/override"><i class="icon-chevron-right"></i> Override default configuration</a></li>
       <li><a href="${advanced}/multiple"><i class="icon-chevron-right"></i> Multiple tables</a></li>
-      <li><a href="${advanced}/ajax"><i class="icon-chevron-right"></i> Ajax source</a></li>
    </ul>
 </div>
 

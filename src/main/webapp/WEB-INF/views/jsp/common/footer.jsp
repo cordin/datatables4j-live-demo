@@ -18,7 +18,7 @@
 							}(document, "script", "twitter-wjs");
 						</script>
    </li>
-   <li><a href="https://twitter.com/DataTables4j" class="twitter-follow-button" style="float: right;" data-show-count="false">Follow
+   <li><a href="https://twitter.com/DataTables4j" class="twitter-follow-button" style="float: right;" data-show-count="true">Follow
          @DataTables4j</a> <script>
 										!function(d, s, id) {
 											var js, fjs = d
