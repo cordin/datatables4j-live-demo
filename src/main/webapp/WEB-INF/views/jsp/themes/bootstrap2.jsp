@@ -4,23 +4,33 @@
 <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet" />
 <link href="<c:url value="/css/custom.css" />" rel="stylesheet">
 <link href="<c:url value="/css/prettify.css" />" rel="stylesheet" />
-
+<link href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css" rel="stylesheet" />
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 <script src="<c:url value="/js/prettify.js" />"></script>
 <script src="<c:url value="/js/ga.js" />"></script>
 
+
 <div class="row-fluid">
    <div class="span12">
       <h3>Bootstrap 2 theme</h3>
-      In order to activate the Bootstrap 2 theme, just :
+      <p>In order to activate the Bootstrap 2 theme, just :
       <ul>
-         <li>set the <code>theme</code> table attribute to <tt>bootstrap2</tt></li>
+         <li>set the <code>theme</code>/<code>dt:theme</code> table attribute to <tt>bootstrap2</tt> (JSP/Thymeleaf)</li>
          <li>depending on your needs, add the table Bootstrap CSS classes using <code>cssClass</code> table
             attribute
          </li>
       </ul>
+      </p>
+      <p>
+      In a nutshell, you need to include in your page the following assets :
+      <ul>
+         <li>jQuery of course :-)</li>
+         <li>Bootstrap (JS + CSS)</li>
+         <li>DataTables (JS + CSS + IMG)</li>
+      </ul>
+      </p>
       <br />
    </div>
 </div>
