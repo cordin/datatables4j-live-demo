@@ -94,11 +94,8 @@ public class PersonDao {
 
 			List<String> orderParams = new ArrayList<String>();
 			queryBuilder.append(" ORDER BY ");
-			for (ColumnDef columnDef : criterias.getColumnDefs()) {
-				if (columnDef.isSorted()) {
-					orderParams
-							.add("p." + columnDef.getName() + " " + columnDef.getSortDirection());
-				}
+			for (ColumnDef columnDef : criterias.getSortingColumnDefs()) {
+				orderParams.add("p." + columnDef.getName() + " " + columnDef.getSortDirection());
 			}
 
 			Iterator<String> itr2 = orderParams.iterator();
