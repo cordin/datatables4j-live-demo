@@ -1,4 +1,4 @@
-INSERT INTO `address` (`id`,`street`,`town_id`) VALUES ('1','P.O. Box 830, 8335 Pellentesque Av.','1');
+INSERT INTO `address` (`id`,`street`,`town_id`) VALUES ('1','P.O. Box 830, 8335 Pellentesque Av.',null);
 INSERT INTO `address` (`id`,`street`,`town_id`) VALUES ('2','P.O. Box 325, 6341 Erat St.','2');
 INSERT INTO `address` (`id`,`street`,`town_id`) VALUES ('3','172-5757 Imperdiet Road','3');
 INSERT INTO `address` (`id`,`street`,`town_id`) VALUES ('4','343-9277 Vel St.','4');
